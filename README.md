@@ -43,7 +43,7 @@ These are the in-game sprites. Each ```.spt``` file can conntain multiple images
 
 The pixel data works as follows: it always starts with a color. If the image has 10 colors defined, then it could be any one of those (colors start at 0) (however, when working on the asstes from the prerelease of the game that is up on archive.org, evolver.spt had a color that was outside of the range. Image seemed fine if the offending color had a modulo operator applied, where the color was being divided by the length of the colors defined in the file). If the color bit had its uppermost bit set, then it has its run length encoded. The byte that follows an RLE color is the run length, however, if it is above 128, then two bytes are used to encode the length. In that case, the run length is is equal to the sum of the run length byte plus the value of the next byte multiplied by 128.
 
-If there are less than 16 colors defined in the image (details fuzzy on this), then the RLE color may have 4-bit RLE applied instead. The following byte will be the next color, rather than the run length. The color byte in this situation is split in two, the uppermost 4 bits are the RLE data and the lowermost 4 are the color data (as such, the 16 color limit is an educated guess). To get the run length of the color, you need to ignore the uppermost bit and look at the next 3 (for example, ```xA1``` from the first ```.spt``` header example image is 10100001 in binary form. Then 1010 is the RLE data and 0001 is the color data. This means that its run length is 010 in binary, or just 2, and its color is color 1)
+If there are less than 16 colors defined in the image (details fuzzy on this), then the RLE color may have 4-bit RLE applied instead. The following byte will be the next color, rather than the run length. The color byte in this situation is split in two, the uppermost 4 bits are the RLE data and the lowermost 4 are the color data (as such, the 16 color limit is an educated guess). To get the run length of the color, you need to ignore the uppermost bit and look at the next 3 (for example, ```xA1``` from the first ```.spt``` header example image is ```10100001``` in binary form. Then ```1010``` is the RLE data and ```0001``` is the color data. This means that its run length is ```010``` in binary, or just 2, and its color is color 1)
 
 If there are multiple images in the ```.spt``` file, then the next RLE chunk length word is located at the end of the previous RLE chunk end.
 
@@ -51,7 +51,7 @@ If there are multiple images in the ```.spt``` file, then the next RLE chunk len
 These seem to be the 3d models used in the game. I have not tried to parse these yet, so any help would be appreciated.
 
 ## ```.lsc``` files
-Barely researched, seem to define the level triggers, pickups or paths.
+Barely researched, seem to define the level triggers, pickups or paths. Seem to resemble the level trigger and pickup definition ```.txt``` files used in the prerelease.
 
 ## ```.dat``` files
 Seem to be the files that contain level geometry or other info about the levels.
