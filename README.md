@@ -51,3 +51,5 @@ Seem to be the files that contain level geometry or other info about the levels.
 
 ## ```.txt``` files
 These include the slight dev commentary, list of tracks that play in each set of level and the sets of levels themselves. There are mentions of "groovetracker" scripts, which is apparently how the game decides which music to play. You can look at those scripts yourself by opening the files.
+
+The prerelease did not have the ```.lsc``` files in it and instead had text files that described the paths and triggers and also contained short dev comments on the levels and level spawns.
