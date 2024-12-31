@@ -6,16 +6,16 @@
 - [Decoded Images](/Decoded%20Images) will contain the decoded sprites from each game version that I could find
 - [Decoded OST](/Decoded%20OST) contains all the sounds from Snake60 version 0.5.1.4 in ```.wav``` format
 
-### What you'll need:
-1. A ```.sis``` of Snakes below version 0.6.X.X (Explanation will follow, info on versions is fuzzy)
-2. A working setup of [EKA2L1](https://github.com/EKA2L1/EKA2L1) (to extract the .PAK files)
+### What you'll need to extract assets yourself:
+1. A ```.sis``` of Snakes version 0.6.0.4 A3 or below (Explanation will follow, info on versions is fuzzy)
+2. A working setup of [EKA2L1](https://github.com/EKA2L1/EKA2L1) (to extract the .PAK files) (or any other method of unpacking ```.sis``` files.)
 3. [Offzip](http://aluigi.altervista.org/search.php?src=offzip) to unpack the .PAK files
 
 ### How to extract asset packing files PAK files:
 1. Install the ```.sis``` you have into EKA2L1.
 2. Locate the ```.PAK``` files (Mine were located over at ```\[PATH TO YOUR EKA2L1 INSTALL\]\data\drives\e\System\Apps\6R45```)   
    Snakes has 5 ```.PAK``` files, numbered 6R45-ZZ01 through 6R45-ZZ05   
-   !! If you end up with ```.pakc``` files, then you have a version made for devices running S60v3 and above. Those versions have their assets encrypted for whatever reason. I have been unable to break the encryption :(
+   !! If you end up with ```.pakc``` files, then you have a version that is too new which has the assets encrypted for whatever reason. I have been unable to break the encryption :(
 4. Run offzip on each file to extract the assets in some proprietary (?) format
 
 ### What are these files that you just extracted?
