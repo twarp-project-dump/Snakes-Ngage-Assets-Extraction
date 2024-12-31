@@ -12,5 +12,5 @@
 3. Run offzip on each file to extract the assets in some proprietary (?) format that will now need to be unpacked
 
 ### What are these files you just extracted?
-Offzip by default names them 00000031.dat (rarely they have a different name). For intents of this guide, I'll refer to them as the ```Asset packing files```.
+Offzip by default names them 00000031.dat (rarely they have a different name). For intents of this guide, I'll refer to them as the ```Asset packing files```.   
 What are they?
