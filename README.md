@@ -18,3 +18,11 @@ They contain a number of game assets, each one having an entry in the header of 
 ![heres a pic of the header](imgs/asset%20packing%20header.png)
 
 First word contains the length of the file name. Second word is the offset from the beginninng of the file at which the file name begins. Fourth and fifth word follow the same logic as described above, but they point to the contents of the file itself along with its length. Last 2 words are reserves for some sort of a numbering system.
+
+You can find the exact length of the header by looking at the offset of the filename of the first header entry. It points to the beginning of the section that holds the filenames, which is where the header ends.
+
+Now simply parse the ```Asset packing files``` and you will have each asset to play with. Let's take a look at some of them.
+
+## ```.adp``` files
+These are sound files, 8KHz sample rate, VOX ADPCM(?) encoding. You can play them through (Audacity)[https://www.audacityteam.org/] by importing each as a raw file with the settings mentioned before. Here are the sounds [uploaded to YouTube](https://www.youtube.com/watch?v=SK5fnwmWgrs).
+
