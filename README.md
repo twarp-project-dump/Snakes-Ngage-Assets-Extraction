@@ -13,4 +13,5 @@
 
 ### What are these files you just extracted?
 Offzip by default names them 00000031.dat (rarely they have a different name). For intents of this guide, I'll refer to them as the ```Asset packing files```.   
-What are they?
+They contain a number of game assets, each one having an entry in the header of the file. Headers are 32 bytes long.   
+First word contains the length of the file name. Second word is the offset from the beginninng of the file at which the file name begins. Fourth and fifth word follow the same logic as described above, but they point to the contents of the file itself along with its length. Last 2 words are reserves for some sort of a numbering system.
