@@ -13,9 +13,10 @@
 
 ### How to extract asset packing files PAK files:
 1. Install the ```.sis``` you have into EKA2L1.
-2. Locate the .PAK files (Mine were located over at ```\[PATH TO YOUR EKA2L1 INSTALL\]\data\drives\e\System\Apps\6R45)
-   Snakes has 5 .PAK files, numbered 6R45-ZZ01 through 6R45-ZZ05
-3. Run offzip on each file to extract the assets in some proprietary (?) format that will now need to be unpacked
+2. Locate the ```.PAK``` files (Mine were located over at ```\[PATH TO YOUR EKA2L1 INSTALL\]\data\drives\e\System\Apps\6R45```)
+   Snakes has 5 ```.PAK``` files, numbered 6R45-ZZ01 through 6R45-ZZ05
+   !! If you end up with ```.pakc``` files then you have a version made for S60v3 and above devices. !! Those versions have their assets encrypted for whatever reason. I have been unable to break the encryption.
+4. Run offzip on each file to extract the assets in some proprietary (?) format that will now need to be unpacked
 
 ### What are these files you just extracted?
 Offzip by default names them 00000031.dat (rarely they have a different name). For intents of this guide, I'll refer to them as the ```Asset packing files```.   
