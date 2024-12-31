@@ -1,0 +1,67 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;    english                             french                           german                            spanish                                italian                         
+;    123456789012345678901234567890      123456789012345678901234567890   123456789012345678901234567890    123456789012345678901234567890         123456789012345678901234567890  
+T1: "Hex levels work in much the"      , "Les niveaux hexagonales"       , "Hex-Levels funktionieren wie " , "Los niveles hexagonales"           , "I livelli esagonali sono"       
+T2: "same way as regular levels."      , "fonctionnent comme les"        , "normale Levels. Du musst "     , "funcionan casi como los"           , "simili a quelli normali."       
+T3: "However, more key presses "       , "niveaux normaux, mais il"      , "allerdings mehr Tasten "       , "normales. Sólo hay que pulsar"     , "Devi però premere più "         
+T4: "are required to turn the "        , "faut appuyer sur plus de"      , "drücken, um die Schlange "     , "más veces para que gire "          , "volte per far girare il"        
+T5: "snake around. "                   , "touches pour faire tourner le" , "herumzulenken. "               , "completamente la serpiente."       , "serpente. "                     
+T6: " "                                , "serpent."                      , " "                             , " "                                 , " "                             
+T7: " "                                , " "                             , " "                             , " "                                 , " "                             
+T8: " "                                , " "                             , " "                             , " "                                 , " "                             
+T9: " "                                , " "                             , " "                             , " "                                 , " "                             
+
+
+300, 0, 1,   x, s, 0
+301, 1, 1,   x, s, 0
+
+p:0, 0
+p:1, 0
+
+; end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

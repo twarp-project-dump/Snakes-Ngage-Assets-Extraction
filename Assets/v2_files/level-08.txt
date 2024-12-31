@@ -1,0 +1,46 @@
+; level 08
+
+n:"Straight Lines","Lignes droites","Kerzengerade","Líneas rectas","Linee dritte"
+
+
+; trigger pickup activates path 4 or 5 (completing the paths activates a pickup)
+300, 10, 1, |101:102, s, 0
+101,  4, 0, &301:302, s, 0
+102,  5, 0, &301:302, s, 0
+
+
+
+; trigger pickup activates path 2 or 3 (completing the paths activates a pickup)
+301, 7, 1, |103:104, s, 0
+103, 2, 0, &302:300, s, 0
+104, 3, 0, &302:300, s, 0
+
+
+
+; trigger pickup activates path 0 or 1 (completing the paths activates a pickup)
+302,11, 1, |105:106, s, 0
+105, 0, 0, &301:300, s, 0
+106, 1, 0, &301:300, s, 0
+
+; 'G' collecting two pickups activates the G letter
+
+303,  8, 1, 121, s, 0
+303,  9, 1, 121, s, 0
+
+121,  x, 0, 500, a, 2
+500, 12, 0, 108, s, 0
+
+; new path activated when letter is picked up
+
+108,  6, 0, 300, s, 0
+
+;501, 11, 2, ~500, s, 0
+
+p:8,0
+p:9,0
+p:7,0
+p:11,0
+p:10,0
+
+
+; end

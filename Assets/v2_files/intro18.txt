@@ -1,0 +1,66 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;    english                            french                            german                              spanish                             italian                         
+;    123456789012345678901234567890      123456789012345678901234567890      123456789012345678901234567890     123456789012345678901234567890     123456789012345678901234567890  
+T1: "The 'hard turn' key can be "      ,"La touche 'virage' peut être "   , "Mit der Taste für die "  	     , "La tecla de 'giro brusco'"       ,"La 'Curva stretta' si può"      
+T2: "used to increase the turn of "    ,"utilisée pour faire un virage "  , "'Scharfe Kurve' kann sich"      , "puede usarse para aumentar"      ,"usare per far svoltare più "    
+T3: "the snake. "                      ,"plus serré. "                    , "die Schlange schneller"		 , "el giro de la serpiente."        ,"bruscamente il serpente. "      
+T4: " "                                ," "                               , "drehen. "                       , " "                               ," "                             
+T5: " "                                ," "                               , " "                              , " "                               ," "                             
+T6: " "                                ," "                               , " "                              , " "                               ," "                             
+T7: " "                                ," "                               , " "                              , " "                               ," "                             
+T8: " "                                ," "                               , " "                              , " "                               ," "                             
+T9: " "                                ," "                               , " "                              , " "								 ," "
+
+
+
+300, 0, 1,  x, s, 0
+
+
+;
+; end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

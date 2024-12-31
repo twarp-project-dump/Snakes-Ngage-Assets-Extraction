@@ -1,0 +1,29 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                              french                               german                            spanish                         italian
+;   123456789012345678901234567890       123456789012345678901234567890       123456789012345678901234567890    123456789012345678901234567890  123456789012345678901234567890
+T1:"Try to avoid contact with"         ,"Essayez d'éviter tout contact"     ,"Versuch Kontakt mit Mauern"     ,"No choques contra"          ,"Cerca di evitare il contatto"
+T2:"any walls."                        ,"avec les murs."                    ,"zu vermeiden."                  ,"los muros."                    ,"con le pareti."
+T3:"Solid walls harm a snake"          ,"Les murs incassables blessent"     ,"Feste Wände verletzen eine"     ,"Los muros sólidos te dañarán"  ,"Le pareti solide danneggiano"
+T4:"a lot more than"                   ,"le serpent beaucoup plus que"      ,"Schlange deutlich stärker"      ,"mucho más que"                 ,"il serpente molto più"
+T5:"destructible walls do."            ,"les murs destructibles."           ,"als zerstörbare."               ,"los muros que se destruyen."   ,"delle pareti distruttibili."
+T6:" "                                 ," "                                 ," "                              ," "                             ," "
+T7:" "                                 ," "                                 ," "                              ," "                             ," "
+T8:" "                                 ," "                                 ," "                              ," "                             ," "
+T9:" "                                 ," "                                 ," "                              ," "                             ," "
+
+
+@
+
+
+; end
+
+

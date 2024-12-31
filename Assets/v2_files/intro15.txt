@@ -1,0 +1,88 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;    english                            french                               german                          spanish                               italian                         
+;    123456789012345678901234567890       123456789012345678901234567890       123456789012345678901234567890  123456789012345678901234567890     123456789012345678901234567890  
+T1: "Collect six letters to form"      , "Ramassez six lettres"             , "Sammle sechs Buchstaben, um" , "Recoge seis letras para "		,"Raccogli le sei lettere della"  
+T2: "the word 'SNAKES' and access"     , "pour former le mot SNAKES"        , "das Wort 'SNAKES' zu bauen." , "formar la palabra 'SNAKES'"		,"parola 'SNAKES' per accedere"   
+T3: "the bonus level."                 , "et accéder au niveau bonus."      , "Das ist der Zugang zu einem" , "y acceder al nivel de "			,"al livello bonus."              
+T4: " "                                , " "                                , "Bonus-Level."                , "bonificación. "                  ," "                             
+T5: " "                                , " "                                , " "                           , " "                               ," "                             
+T6: " "                                , " "                                , " "                           , " "                               ," "                             
+T7: " "                                , " "                                , " "                           , " "                               ," "                             
+T8: " "                                , " "                                , " "                           , " "                               ," "                             
+T9: " "                                , " "                                , " "                           , " "                               ," "                             
+
+
+600, 0, 1, 602, t, 2
+; 601, x, 0, 602, t, 3
+
+602, 1, 0, 604, t, 2
+; 603, x, 1, 604, t, 3
+
+604, 2, 0, 606, t, 2
+; 605, x, 1, 606, t, 3
+
+606, 3, 0, 608, t, 2
+; 607, x, 1, 608, t, 3
+
+608, 4, 0, 610, t, 2
+; 609, x, 1, 610, t, 3
+
+610, 5, 0, 612, t, 2
+; 611, x, 1, 600, t, 3
+
+
+612, 0, 0, 600, t, 3
+612, 1, 0,   x, t, 3
+612, 2, 0,   x, t, 3
+612, 3, 0,   x, t, 3
+612, 4, 0,   x, t, 3
+612, 5, 0,   x, t, 3
+
+
+; end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

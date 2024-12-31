@@ -1,0 +1,54 @@
+; level-04 - introduction to power paths
+
+n:"Branches","Branches","Äste","Ramas","Ramificazioni"
+
+; trigger pickup activates path 0 or 1 (completing the paths activates a pickup)
+300, 7, 1, |101:102, s, 0
+101, 2, 0, &301:302, s, 0
+102, 5, 0, &303:300, s, 0
+
+
+
+; trigger pickup activates path 2 or 3 (completing the paths activates a pickup)
+301, 8, 1, |103:104, s, 0
+103, 3, 0, &302:303, s, 0
+104, 4, 0, &300:301, s, 0
+
+
+
+; trigger pickup activates path 4 or 5 (completing the paths activates a pickup)
+302, 9, 1, |105:106, s, 0
+105, 1, 0, &303:300, s, 0
+106, 2, 0, &301:302, s, 0
+
+
+
+; trigger pickup activates path 1 or 5 (completing the paths activates a pickup)
+303, 6, 1, |107:108, s, 0
+107, 0, 0, &300:301, s, 0
+108, 3, 0, &302:303, s, 0
+
+
+; 'G'
+500, 10, 1, 501, t, 10
+501,  x, 0, 500, t,  5
+
+502, 10, 2, ~500:501, s, 0
+
+; 1 UP
+503, 11, 1, 504, t,  5
+504,  x, 0, 503, t, 10
+
+505, 11, 2, ~503:504, s, 0
+
+
+p:6,0
+p:7,0
+p:8,0
+p:9,0
+
+
+
+; end
+
+

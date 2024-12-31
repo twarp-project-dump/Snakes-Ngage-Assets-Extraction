@@ -1,0 +1,81 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                              french                           german                                spanish                              italian
+;   123456789012345678901234567890       123456789012345678901234567890   123456789012345678901234567890        123456789012345678901234567890       123456789012345678901234567890
+T1:"Pick-up Seekers steal"            , "Les chercheurs d'objets"      , "Pickup-Sucher stehlen "            , "Los buscadores de extras roban"    ,"I cacciatori di oggetti"
+T2:"pick-ups and power-ups."          , "volent les objets ramassés"   , "Pickups und Extras."               , "extras y potenciadores"            ,"rubano gli oggetti e i"
+T3:" "                                , "et les recharges d'énergie"   , " "                                 , " "                                 ,"power-up"
+T4:"Grab that power-up before this"   , "Ramassez cette recharge"      , "Schnapp dir dieses Extra,"         , "Hazte de esos potenciadores"       ,"Prendi i power-up prima che"
+T5:"enemy does."                      , "d'énergie avant que cet"      , "bevor der Feind es tut."           , "antes de que lo haga tu"           ,"lo faccia questo nemico."
+T6:" "                                , "ennemi ne le fasse."          , " "                                 , "enemigo."                          ," "
+T7:" "                                , " "                            , " "                                 , " "                                 ," "
+T8:" "                                , " "                            , " "                                 , " "                                 ," "
+T9:" "                                , " "                            , " "                                 , " "                                 ," "
+
+
+100, 1, 1, 101, s, 0
+101, 2, 0, 100, s, 0
+
+p:1,0
+p:2,0
+
+
+
+; end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

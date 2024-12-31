@@ -1,0 +1,76 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;    english                          french                              german                              spanish                              italian
+;    123456789012345678901234567890   123456789012345678901234567890      123456789012345678901234567890      123456789012345678901234567890       123456789012345678901234567890
+T1: "Be wary of Snake Seekers."     ,"Méfiez-vous des chasseurs de"     ,"Hüte dich vor"                    ,"Cuídate de los buscadores"		 ,"Attento ai cacciatori di"
+T2: " "                             ,"serpents."                        ,"Schlangen-Suchern."               ,"de serpientes."                    ,"serpenti."
+T3: "These enemies will steal"      ,"Ces ennemis volent"               ,"Diese Feinde stehlen die "        ,"Estos enemigos disminuirán"        ,"Questi nemici rubano"
+T4: "the energy from your Snake."   ,"l'énergie de votre serpent"       ,"Energie deiner Schlange."         ,"la energía de tu serpiente"        ,"l'energia al tuo serpente"
+T5: " "                             ," "                                ," "                                ," "                                 ," "
+T6: " "								," "                                ," "                                ," "                                 ," "
+T7: " "                             ," "                                ," "                                ," "                                 ," "
+T8: " "                             ," "                                ," "                                ," "                                 ," "
+T9: " "                             ," "                                ," "                                ," "                                 ," "
+
+
+@
+
+
+; end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

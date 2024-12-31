@@ -1,0 +1,25 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                              french                               german                            spanish                                    italian
+;   123456789012345678901234567890       123456789012345678901234567890       123456789012345678901234567890    123456789012345678901234567890             123456789012345678901234567890
+T1:"Green Areas will speed you up."    ,"Les espaces verts vous feront"     ,"Grüne Bereiche machen dich"     ,"Correrás más rápido en las "              ,"Le aree verdi ti fanno"
+T2:"Red Areas will slow you down."     ,"accélérer. Les espaces rouges"     ,"schneller."                     ,"áreas verdes. Correrás menos"             ,"accelerare."
+T3:" "                                 ,"vous feront ralentir."             ,"Rote Bereiche bremsen dich ab." ,"en las áreas rojas. "                     ,"Le aree rosse ti fanno"
+T4:"Speed can also be controlled"      ,"La vitesse peut également être"    ,"Das Tempo kann auch mit den"    ,"También puedes controlar la "             ,"rallentare."
+T5:"using the boost and brake keys."   ,"contrôlée en utilisant les"        ,"Boost- und Brems-Tasten"        ,"velocidad usando las teclas de "          ,"Puoi controllare la velocità"
+T6:" "                                 ,"touches d'accélération et de"      ,"gesteuert werden."              ,"velocidad y de freno."                    ,"anche per mezzo dei tasti"
+T7:" "                                 ,"freins."                           ," "                              ," "                                        ,"acceleratore e freno."
+T8:" "                                 ," "                                 ," "                              ," "                                        ," "
+T9:" "                                 ," "                                 ," "                              ," "                                        ," "
+
+@
+
+; end

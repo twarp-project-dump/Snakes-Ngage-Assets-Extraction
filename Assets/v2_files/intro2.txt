@@ -1,0 +1,38 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                              french								 german								spanish							  italian
+;   123456789012345678901234567890       123456789012345678901234567890      123456789012345678901234567890     123456789012345678901234567890    123456789012345678901234567890
+T1:"Some pick-ups may activate"        ,"Certaines recharges peuvent"	    ,"Einige Pickups können "          ,"Algunos objetos pueden activar","Alcuni oggetti possono"		
+T2:"power paths."                      ,"activer des chemins de"           ,"Kraftpfade aktivieren."          ,"rutas de energía."              ,"attivare percorsi di energia."
+T3:" "                                 ,"puissance."                       ," "                               ," "                                ," "                            
+T4:"These power paths are the"         ,"Ces chemins sont la clé"          ,"Diese Kraftpfade sind der "      ,"Estas rutas de energía"           ,"I percorsi di energia sono"   
+T5:"key to a high score."              ,"pour obtenir un score élevé."     ,"Schlüssel zu einem Highscore."   ,"proporcionan una mayor"           ,"essenziali per fare molti"	
+T6:" "                                 ," "                                ," "                               ,"puntuación."                      ,"punti."                       
+T7:" "                                 ," "                                ," "                               ," "                              ," "                            
+T8:" "                                 ," "                                ," "                               ," "                              ," "                            
+T9:" "                                 ," "                                ," "                               ," "                              ," "                            
+
+
+; you could set up a proper script here but I'm going to cheat
+; and use the hither to undocumented '@' symbol, this will turn on
+; all objects in the level
+
+300, 1, 0, 301, t, 3
+301, x, 1, 300, t, 3
+
+100, 0, 1, 101, t, 3
+101, x, 0, 100, t, 3
+
+p:1,0
+
+; end
+
+

@@ -1,0 +1,39 @@
+; level-05 - introduction to multiple power paths from one pickup
+
+n:"Paired","Par paires","Paare","Emparejados","Coppie"
+
+; trigger pickup activates path 6 and 7 (completing the paths opens the next path)
+300, 8, 1, &101:102, s, 0
+
+101, 6, 0, 103, s, 0
+102, 7, 0, 104, s, 0
+
+
+103, 4, 0, 105, s, 0
+104, 5, 0, 106, s, 0
+
+105, 2, 0, 107, s, 0
+106, 3, 0, 108, s, 0
+
+; Triggering final path makes the first pickup appear again, so the process can be repeated
+
+107, 0, 0, 300, s, 0
+108, 1, 0, 300, s, 0
+
+
+
+; 'E'
+
+500, 9, 1, 600, s, 0
+501, 9, 2, ~500, s, 0
+
+; 1UP
+
+600, 10, 0,   x, s, 0
+
+p:8,0
+
+
+; end
+
+

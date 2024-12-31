@@ -1,0 +1,79 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;    english                            french                           german                          spanish                            italian                       
+;    123456789012345678901234567890     123456789012345678901234567890   123456789012345678901234567890  123456789012345678901234567890     123456789012345678901234567890
+T1: "Spell out the word 'NGAGE' by"    , "Trouvez les 5 lettres du mot" , "Bau das Wort 'NGAGE', indem" , "Forma la palabra 'NGAGE'"       ,"Forma la parola 'NGAGE'"      
+T2: "collecting 5 letters over"        , "NGAGE sur des niveaux"        , "du die Buchstaben dazu in"   , "recogiendo 5 letras en niveles" ,"raccogliendo 5 lettere in"    
+T3: "consecutive levels to receive"    , "consécutifs pour avoir"       , "fünf aufeinander folgenden"  , "consecutivos para recibir una"  ,"livelli consecutivi per avere"
+T4: "a bonus. "                        , "un bonus. "                   , "Levels sammelst. Dann"       , "bonificación."                  ,"un bonus. "                   
+T5: " "                                , " "                            , "erhältst du einen Bonus."    , " "                              ," "                           
+T6: " "                                , " "                            , " "                           , " "                              ," "                           
+T7: " "                                , " "                            , " "                           , " "                              ," "                           
+T8: " "                                , " "                            , " "                           , " "                              ," "                           
+T9: " "                                , " "                            , " "                           , " "                              ," "                           
+
+
+600, 0, 1, 602, t, 2
+
+602, 1, 0, 604, t, 2
+
+604, 2, 0, 606, t, 2
+
+606, 3, 0, 608, t, 2
+
+608, 4, 0, 612, t, 2
+
+612, 0, 0, 600, t, 3
+612, 1, 0,   x, t, 3
+612, 2, 0,   x, t, 3
+612, 3, 0,   x, t, 3
+612, 4, 0,   x, t, 3
+
+
+; end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

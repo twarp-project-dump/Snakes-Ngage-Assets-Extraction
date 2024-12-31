@@ -1,0 +1,107 @@
+; level 34 - new level
+
+n:"Spiral","Spirale","Spirale","Espiral","Spirale"
+
+; player must make his way to the centre of the hex
+
+
+; outer ring
+
+100, 14, 1, 101, s, 0
+101, 16, 0, 102, s, 0
+102, 19, 0, &103:300, s, 0
+103, 20, 0, 301, s, 0
+
+300, 35, 0, 302, s, 0
+301, 34, 0, 303, s, 0
+302, 33, 0, 304, s, 0
+303, 31, 0, 305, s, 0
+304, 32, 0, 306, s, 0
+305, 30, 0, 307, s, 0
+306, 27, 0, 308, s, 0
+307, 28, 0, &309:310, s, 0
+308, 26, 0, 104, s, 0
+
+; slow down section
+
+309, 23, 0,   x, s, 0
+310, 22, 0,   x, s, 0
+
+; far side of outer ring
+
+104,  3, 0, 105, s, 0
+105,  1, 0, 106, s, 0
+106,  0, 0, 107, s, 0
+107,  2, 0, 108, s, 0
+
+; 'E' letter can be collected here
+
+500, 36, 1,   x, s, 0
+
+; back to the outer ring
+
+108,  4, 0, 109, s, 0
+109,  5, 0, 110, s, 0
+110,  8, 0, 111, s, 0
+111,  9, 0, &112:311, s, 0
+112, 11, 0, |113:117, s, 0
+
+311, 25, 0,   x, s, 0
+
+; inner ring
+
+player can go one of two ways depending on which path is opened
+
+; top path
+
+113, 13, 0, 114, s, 0
+114, 18, 0, 115, s, 0
+115, 17, 0, 312, s, 0
+
+312, 29, 0, 116, s, 0
+116, 15, 0, 314, s, 0
+
+; bottom path
+
+117, 12, 0, 118, s, 0
+118,  6, 0, 119, s, 0
+119,  7, 0, 313, s, 0
+
+313, 24, 0, 120, s, 0
+120, 10, 0, 314, s, 0
+
+
+; final health trigger which is worth a lot of points and ends the level. Horrah!
+
+314, 21, 0,   x, s, 0
+
+; the new score setup 
+; s:pickup id, score value
+;
+s:21,8000
+
+; identifiers
+
+p:35,2
+p:34,2
+p:33,2
+p:31,2
+p:32,2
+p:30,2
+p:27,2
+p:28,2
+p:26,2
+
+p:23,0
+p:22,0
+
+p:25,5
+p:24,5
+p:29,5
+
+p:21,0
+
+
+
+
+; end

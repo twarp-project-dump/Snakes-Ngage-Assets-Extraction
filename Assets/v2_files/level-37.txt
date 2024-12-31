@@ -1,0 +1,11 @@
+; level 37 - New level
+
+n:"End","Extrémité","Ende","Extremo","Estremità"
+
+; empty level except for the single pick up which appears after 10 seconds (or thereabouts)
+
+300, 0, 0, 301, t, 15
+301, x, 1, 300, t, 10
+
+
+; end

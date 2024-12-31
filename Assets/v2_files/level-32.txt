@@ -1,0 +1,112 @@
+; level 32 - new level
+
+n:"Shielded","Abris","Geschützt","Con escudo","Scudi"
+
+; split up into 3 sections both top and flip side
+
+; section 1 (top side)
+
+100, 19, 1, 101, s, 0
+101, 18, 0, 102, s, 0
+102, 17, 0, &103:300, s, 0
+103, 16, 0, 301, s, 0
+300, 39, 0,   x, s, 0
+
+; player needs to collect shield pickup to reach the next section
+
+; section 2 (top side)
+
+301, 37, 0, 302, s, 0
+302, 38, 0, 303, s, 0
+303, 40, 0, 304, s, 0
+304, 41, 0, 305, s, 0
+305, 36, 0, 306, s, 0
+306, 35, 0, 307, s, 0
+307, 31, 0, 308, s, 0
+308, 28, 0, 309, s, 0
+309, 29, 0, 310, s, 0
+310, 25, 0, 311, s, 0
+311, 24, 0, 312, s, 0
+312, 27, 0, 313, s, 0
+313, 26, 0, 314, s, 0
+314, 30, 0, 315, s, 0
+315, 32, 0, &316:317, s, 0
+316, 34, 0, 104, s, 0
+317, 33, 0, 500, s, 0
+
+; 'G' letter which is on the flip side
+
+500, 42, 0,   x, s, 0
+
+; another shield pickup collected
+
+; section 3 (top side)
+
+104, 14, 0, 105, s, 0
+105, 15, 0, 106, s, 0
+106, 13, 0, 107, s, 0
+107, 11, 0, &108:318, s, 0
+108, 10, 0, 109, s, 0
+
+; another shield collected
+
+318, 23, 0, 319, s, 0
+109, 12, 0, 110, s, 0
+319, 20, 0, 320, s, 0
+
+; section 3 (flip side)
+
+320, 21, 0,   x, s, 0
+110,  2, 0, 111, s, 0
+111,  0, 0, 112, s, 0
+112,  1, 0, 113, s, 0
+113,  3, 0, 114, s, 0
+
+; section 2 (flip side)
+
+114,  7, 0, 115, s, 0
+115,  5, 0, 116, s, 0
+116,  4, 0, &117:321, s, 0
+117,  6, 0, 118, s, 0
+
+321, 22, 0,   x, s, 0
+
+118,  8, 0, 119, s, 0
+119,  9, 0, 100, s, 0
+
+; level repeats
+
+
+
+
+; health and shield pickups (which are actually triggers)
+
+p:39,5
+
+p:37,0
+p:38,0
+p:40,0
+p:41,0
+p:36,0
+p:35,0
+p:31,0
+p:28,0
+p:29,0
+p:25,0
+p:24,0
+p:27,0
+p:26,0
+p:30,0
+p:32,0
+p:34,0
+p:33,5
+
+p:23,5
+
+p:20,5
+p:21,5
+p:22,5
+
+
+
+; end

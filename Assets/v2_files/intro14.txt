@@ -1,0 +1,78 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                              french                            german                               spanish                                italian                       
+;   123456789012345678901234567890       123456789012345678901234567890    123456789012345678901234567890       123456789012345678901234567890         123456789012345678901234567890
+T1:"Grab any mini-snakes which"        ,"Ramassez tous les mini-serpents","Hol dir Minischlangen, um ein"     ,"Recoge las miniserpientes"           ,"Prendi tutti i mini serpenti"  
+T2:"appear, to receive an extra"       ,"qui surgissent pour recevoir"   ,"Extraleben zu bekommen."           ,"que aparezcan, para recibir "        ,"che appaiono per ottenere"     
+T3:"life. "                            ,"une vie supplémentaire."        ," "                                 ,"una vida extra."                     ,"una vita extra. "              
+T4:" "                                 ," "                              ," "                                 ," "                                   ," "                            
+T5:" "                                 ," "                              ," "                                 ," "                                   ," "                            
+T6:" "                                 ," "                              ," "                                 ," "                                   ," "                            
+T7:" "                                 ," "                              ," "                                 ," "                                   ," "                            
+T8:" "                                 ," "                              ," "                                 ," "                                   ," "                            
+T9:" "                                 ," "                              ," "                                 ," "                                   ," "                            
+
+
+
+500, 0, 1, 502, t, 3
+; 501, x, 0, 502, t, 3
+
+502, 1, 0, 504, t, 3
+; 503, x, 1, 504, t, 3
+
+504, 2, 0, 500, t, 3
+; 505, x, 1, 500, t, 3
+
+
+
+; end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+; V1.0
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name
+;
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                              french                                german                             spanish                              italian
+;   123456789012345678901234567890       123456789012345678901234567890        123456789012345678901234567890     123456789012345678901234567890       123456789012345678901234567890
+T1:"Gaps in the floor can be used"     ,"Les trous dans le sol"              ,"Durch Lücken im Boden steuerst"  ,"Puedes usar los agujeros del"      ,"Le aperture nel pavimento"
+T2:"to access the underside of"        ,"permettent d'accéder aux"           ,"du auf die Unterseite der" 	    ,"suelo para acceder a la parte"     ,"permettono di accedere alla parte"
+T3:"the world."                        ,"souterrains du monde."              ,"Welt."                       	,"inferior este mundo."               ,"inferiore del mondo."
+T4:"Some areas are only"               ,"Certains endroits ne sont"          ,"Einige Bereiche kannst "         ,"Algunas áreas son sólo"            ,"Alcune aree sono accessibili"
+T5:"accessible in this way."           ,"accessibles que de cette"           ,"du nur so erreichen."            ,"accesibles de este modo."          ,"solo in questo modo."
+T6:" "                                 ,"façon."                             ," "                               ," "                                 ," "
+T7:" "                                 ," "                                  ," "                               ," "                                 ," "
+T8:" "                                 ," "                                  ," "                               ," "                                 ," "
+T9:" "                                 ," "                                  ," "                               ," "                                 ," "
+
+@
+
+; end
+
+

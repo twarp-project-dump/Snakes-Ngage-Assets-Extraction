@@ -1,0 +1,111 @@
+; level 23 - new level, puzzle based
+
+n:"Circuit","Circuit","Kreis","Circuito","Circuito"
+
+; picking up all the triggers opens the power paths on the flipside
+
+300, 39, 1, 320, s, 0
+301, 34, 1, 320, s, 0
+302, 35, 1, 320, s, 0
+303, 37, 1, 320, s, 0
+304, 38, 1, 320, s, 0
+305, 36, 1, 320, s, 0
+306, 33, 1, 320, s, 0
+
+320,  x, 0, 100, a, 7
+
+; completing power paths open more triggers leading to the top side
+
+100,  0, 0, 101, s, 0
+101,  1, 0, &307:308:309:310, s, 0
+
+307, 23, 0,   x, s, 0
+308, 24, 0,   x, s, 0
+309, 25, 0,   x, s, 0
+310, 26, 0, 102, s, 0
+
+; follow paths to get to next section
+
+102, 12, 0, 103, s, 0
+103,  9, 0, 104, s, 0
+
+; first power path opens 3 triggers
+
+104,  6, 0, &311:312:313, s, 0
+
+311, 21, 0, 330, s, 0
+312, 17, 0, 330, s, 0
+313, 19, 0, 330, s, 0
+
+330,  x, 0, 105, a, 3
+
+; next power path is opened
+
+105,  2, 0, &314:315:316, s, 0
+
+314, 22, 0, 340, s, 0
+315, 18, 0, 340, s, 0
+316, 20, 0, 340, s, 0
+
+340,  x, 0, 106, a, 3
+
+; the final maze-like section is then opened
+
+106,  4, 0, 107, s, 0
+107,  3, 0, 108, s, 0
+108,  5, 0, 109, s, 0
+109, 10, 0, 110, s, 0
+110,  7, 0, 111, s, 0
+111,  8, 0, 112, s, 0
+112, 11, 0, 113, s, 0
+113, 13, 0, 114, s, 0
+114, 14, 0, &300:301:302:303:304:305:306, s, 0
+
+; back to the beggining to loop around 
+
+
+; 'E' letter and health pickups near it
+
+500, 40, 1,   x, s, 0
+
+350, 27, 1, x, s, 0
+351, 28, 1, x, s, 0
+352, 29, 1, x, s, 0
+353, 30, 1, x, s, 0
+354, 31, 1, x, s, 0
+355, 32, 1, x, s, 0
+
+
+; health pickups
+
+p:17,0
+p:18,0
+p:19,0
+p:20,0
+p:21,0
+p:22,0
+
+p:23,0
+p:24,0
+p:25,0
+p:26,0
+
+
+p:27,0
+p:28,0
+p:29,0
+p:30,0
+p:31,0
+p:32,0
+
+p:33,0
+p:34,0
+p:35,0
+p:36,0
+p:37,0
+p:38,0
+p:39,0
+
+
+
+; end
