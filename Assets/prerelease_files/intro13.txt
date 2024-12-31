@@ -1,0 +1,45 @@
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name 
+;
+N:intro 13
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;    english                              french                              german                             spanish                             italian
+;    123456789012345678901234567890       123456789012345678901234567890      123456789012345678901234567890     123456789012345678901234567890      123456789012345678901234567890
+T1: "It's possible for multiple"       , "Il est possible"                 , "Während du Pickups"             , "Es posible que surjan"            ,"È possibile che appaiano"
+T2: "power paths to appear"            , "qu\'apparaissent plusieurs"      , "aufsammelst, können mehrere"    , "múltiples caminos de potencia"    ,"più percorsi di energia"
+T3: "while collecting pickups."        , "chemins de puissance en"         , "Kraftpfade erscheinen."         , "mientras recoges extras."         ,"mentre raccogli gli oggetti."
+T4: " "                                , "ramassant des objets."           , " "                              , " "                                ," "
+T5: " "                                , " "                               , " "                              , " "                                ," "
+T6: " "                                , " "                               , " "                              , " "                                ," "
+T7: " "                                , " "                               , " "                              , " "                                ," "
+T8: " "                                , " "                               , " "                              , " "                                ," "
+T9: " "                                , " "                               , " "                              , " "                                ," "
+
+
+
+
+
+
+300, 4, 1, 301, t, 3
+301, x, 0, 100, t, 3
+
+
+100, 0, 0, 101, t, 3
+101, x, 1, 100, t, 3
+
+102, 1, 0, 103, t, 3
+103, x, 1, 102, t, 3
+
+104, 2, 0, 105, t, 3
+105, x, 1, 104, t, 3
+
+106, 3, 0, 107, t, 3
+107, x, 1, 106, t, 3
+
+; end 
+

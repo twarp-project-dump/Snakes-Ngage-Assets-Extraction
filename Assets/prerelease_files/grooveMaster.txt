@@ -1,0 +1,17 @@
+;
+; this is the groovetracker master script
+; it specifies the order in which grooves 
+; should be played and the level on which 
+; they should start 
+;
+
+1:ambient_1.txt
+2:ambient_extras_2.txt
+3:ambient_melody_3.txt
+5:ambient_melody_beat_4.txt
+7:light_beat_5.txt
+9:med_beat_6.txt
+12:full_beat_seq_7.txt
+15:final_seq_8.txt
+
+; end 

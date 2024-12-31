@@ -1,0 +1,48 @@
+; level 15 - based on original 'snake road' level
+
+; paths inside snake road are opened in order (through triggers or completion of paths)
+
+300, 22, 1, 100, s, 0
+100,  8, 0, 101, s, 0
+101, 10, 0, 309, s, 0
+
+301, 21, 1, 102, s, 0
+102,  7, 0, 308, s, 0
+
+302, 19, 1, 103, s, 0
+103,  4, 0, 104, s, 0
+104,  1, 0, 307, s, 0
+
+303, 14, 1, 105, s, 0
+105,  2, 0, 306, s, 0
+
+304, 18, 1, 106, s, 0
+106,  5, 0, 311, s, 0
+
+; player is lead out of snake road (triggers open paths)
+
+305, 15, 1, 107, s, 0
+107, 11, 0, 310, s, 0
+
+306, 23, 1, 108, s, 0
+108,  9, 0, 310, s, 0
+
+307, 20, 1, 109, s, 0
+109,  6, 0, 300, s, 0
+
+308, 16, 1, 110, s, 0
+110,  0, 0, 300, s, 0
+
+
+;level repeats...
+
+
+
+
+
+
+
+
+
+
+; end

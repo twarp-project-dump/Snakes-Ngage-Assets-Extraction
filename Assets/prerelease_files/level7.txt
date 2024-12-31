@@ -1,0 +1,54 @@
+; level 7 - based on 'wave' level. players will have to use the underside of the level to complete it on time
+
+; first trigger opens first powerpath
+
+300, 23, 1, 100, s, 0
+100,  9, 0, 101, s, 0
+
+; complete 1st path opens the next
+
+101,  6, 0, 301, s, 0
+
+; triggers open other paths
+301, 19, 1, 102, s, 0
+102,  3, 0, 302, s, 0
+302, 18, 1, 103, s, 0
+103,  4, 0, 303, s, 0
+303, 12, 1, 104, s, 0
+104,  1, 0, &304:305:306, s, 0
+
+; 3 triggers have to be activated to make next path active
+
+304, 15, 1, 121, s, 0
+305, 16, 1, 121, s, 0
+306, 17, 1, 121, s, 0
+
+121, x, 0, 122, a, 3
+122, 2, 0, 307, s, 0
+
+; triggers open more paths
+
+307, 13, 1, 105, s, 0
+105,  0, 0, 308, s, 0
+
+308, 14, 1, 106, s, 0
+106,  7, 0, 309, s, 0
+
+309, 24, 1, 107, s, 0
+107,  8, 0, 108, s, 0
+108,  5, 0, &310:311:312, s, 0
+
+
+; 3 triggers have to be activated to make next path active
+
+310, 20, 1, 123, s, 0
+311, 21, 1, 123, s, 0
+312, 22, 1, 123, s, 0
+
+123, x, 0, 124, a, 3
+124, 9, 0, 101, s, 0
+
+; player should now be able to go around the level again (almost) from the start
+
+
+; end

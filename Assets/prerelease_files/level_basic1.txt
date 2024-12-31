@@ -1,0 +1,21 @@
+; basic level 1 - collecting all the pickups completes the level
+
+; triggers are activated in turn
+
+300, 0, 1, 301, s, 0
+301, 7, 0, 302, s, 0
+302, 6, 0, 303, s, 0
+303, 4, 0, 304, s, 0
+304, 2, 0, 305, s, 0
+305, 5, 0, 306, s, 0
+306, 3, 0, 307, s, 0
+307, 1, 0, 300, s, 0
+
+
+; level complete
+
+
+
+; end
+
+

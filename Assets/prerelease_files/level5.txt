@@ -1,0 +1,32 @@
+; level 5 - (first enemy)
+
+; middle power paths are open initially and activate two triggers
+
+100, 3, 1, 300, s, 0
+101, 4, 1, 301, s, 0
+
+; triggers open one of two paths
+
+300, 13, 0, |102:103, s, 0
+301, 10, 0, |104:105, s, 0
+
+; completion of any of these paths re-opens the intial paths
+
+102, 2, 0, 101, s, 0
+103, 6, 0, 101, s, 0
+104, 1, 0, 100, s, 0
+105, 5, 0, 100, s, 0
+
+; finally two triggers open two paths which in turn when completed open the two triggers again
+
+302, 11, 1, 106, s, 0
+303, 12, 1, 107, s, 0
+
+106,  0, 0, 302, s, 0
+107,  7, 0, 303, s, 0
+
+ 
+
+
+; end
+

@@ -1,0 +1,22 @@
+; level 19 - another quite speedy, power path level (oh yeah!)
+
+; very simple, one path completed opens the next path
+
+100, 10, 1, 101, s, 0
+101,  9, 0, 102, s, 0
+102,  7, 0, 103, s, 0
+103,  8, 0, 104, s, 0
+104,  6, 0, 105, s, 0
+105,  5, 0, 106, s, 0
+106,  4, 0, 107, s, 0
+107,  3, 0, 108, s, 0
+108,  2, 0, 109, s, 0
+109,  1, 0, 110, s, 0
+110,  0, 0, 100, s, 0
+
+
+
+
+
+
+; end

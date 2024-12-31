@@ -1,0 +1,35 @@
+; level 16 - based on original 'little honey comb' level
+
+; paths near the slow down points and holes unlock 4 other paths
+
+300, 11, 1, 100, s, 0
+100,  0, 0, 121, s, 0
+
+301, 12, 1, 101, s, 0
+101,  1, 0, 121, s, 0
+
+302, 13, 1, 102, s, 0
+102,  5, 0, 121, s, 0
+
+303, 14, 1, 103, s, 0
+103,  6, 0, 121, s, 0
+
+121,  x, 0, 122, a, 4
+
+122,  2, 0, 304, s, 0
+122,  3, 0, 304, s, 0
+122,  8, 0, 305, s, 0
+122,  9, 0, 305, s, 0
+
+; final two power paths are opened via triggers
+
+304, 10, 1, 104, s, 0
+104,  7, 0, &300:301, s, 0
+
+305, 15, 1, 105, s, 0
+105,  4, 0, &302:303, s, 0
+
+
+
+
+; end

@@ -1,0 +1,62 @@
+; level 10 - based on original 'quarters' level
+
+; first group of triggers activate the first lot of power paths
+
+300, 29, 1, 100, s, 0
+301, 30, 1, 101, s, 0
+302, 26, 1, 102, s, 0
+303, 25, 1, 103, s, 0
+
+; these power paths then open the next batch of triggers (2)
+
+100, 13, 0, 304, s, 0
+101, 14, 0, 305, s, 0
+102,  8, 0, 306, s, 0
+103, 11, 0, 307, s, 0
+
+; triggers activate power paths
+
+304, 28, 0, 104, s, 0
+305, 31, 0, 105, s, 0
+306, 27, 0, 106, s, 0
+307, 24, 0, 107, s, 0
+
+; power paths open next group of triggers (3)
+
+104, 12, 0, 308, s, 0
+105, 15, 0, 309, s, 0
+106, 10, 0, 310, s, 0
+107,  9, 0, 311, s, 0
+
+; triggers activate power paths
+
+308, 19, 0, 108, s, 0
+309, 23, 0, 109, s, 0
+310, 21, 0, 110, s, 0
+311, 17, 0, 111, s, 0
+
+power paths open next group of triggers (4)
+
+108,  4, 0, 312, s, 0
+109,  7, 0, 313, s, 0
+110,  3, 0, 314, s, 0
+111,  0, 0, 315, s, 0
+
+; triggers open final power paths
+
+312, 20, 0, 112, s, 0
+313, 22, 0, 113, s, 0
+314, 18, 0, 114, s, 0
+315, 16, 0, 115, s, 0
+
+; completion of power paths re-opens first group of triggers (1)
+
+112,  5, 0, 300, s, 0
+113,  6, 0, 301, s, 0
+114,  2, 0, 302, s, 0
+115,  1, 0, 303, s, 0
+
+
+
+ 
+; end

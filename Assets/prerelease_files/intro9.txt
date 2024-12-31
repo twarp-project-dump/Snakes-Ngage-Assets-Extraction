@@ -1,0 +1,28 @@
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name 
+;
+N:intro 9
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                              french                              german                             spanish                              italian
+;   123456789012345678901234567890       123456789012345678901234567890      123456789012345678901234567890     123456789012345678901234567890       123456789012345678901234567890
+T1:"Complete levels quickly to"        ,"Terminez rapidement les"          ,"Schließ die Levels schneller"    ,"Completa los níveles"              ,"Completando i livelli"
+T2:"attain a higher time bonus."       ,"niveaux pour obtenir un bonus"    ,"ab, um höhere Zeitboni zu"       ,"rápidamente y obtendrás más"       ,"rapidamente potrai ottenere"
+T3:" "                                 ,"de temps plus élevé."             ,"bekommen."                       ,"bonus de tiempo."                  ,"un bonus tempo superiore."
+T4:" "                                 ," "                                ," "                               ," "                                 ," "
+T5:" "                                 ," "                                ," "                               ," "                                 ," "
+T6:" "                                 ," "                                ," "                               ," "                                 ," "
+T7:" "                                 ," "                                ," "                               ," "                                 ," "
+T8:" "                                 ," "                                ," "                               ," "                                 ," "
+T9:" "                                 ," "                                ," "                               ," "                                 ," "
+
+
+@
+
+
+; end 
+

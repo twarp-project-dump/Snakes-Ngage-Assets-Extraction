@@ -1,0 +1,25 @@
+; level 0 - pickups galore and one power path to complete level
+
+; triggers are activated in turn
+
+300, 1, 1, 301, s, 0
+301, 7, 0, 302, s, 0
+302, 6, 0, 303, s, 0
+303, 4, 0, 304, s, 0
+304, 2, 0, 305, s, 0
+305, 5, 0, 306, s, 0
+306, 3, 0, 100, s, 0
+
+; once final trigger is activated the power path opens up
+
+100, 0, 0, x, s, 0
+
+
+
+
+
+
+
+; end
+
+

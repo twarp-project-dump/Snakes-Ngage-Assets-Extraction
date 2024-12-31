@@ -1,0 +1,30 @@
+; Level 4 - first appearance of non-destructable walls (and pickup seeker)
+
+;outer paths start on
+
+100, 0, 1, x, s, 0
+101, 3, 1, x, s, 0
+102, 5, 1, x, s, 0
+103, 8, 1, x, s, 0
+
+;outer triggers open inner paths
+
+300,12, 1, 104, s, 0
+301,13, 1, 105, s, 0
+302,14, 1, 106, s, 0
+303,15, 1, 107, s, 0
+
+;inner paths re-open outer path and outer trigger
+
+104, 6, 0, &101:108:300, s, 0
+105, 7, 0, &100:108:301, s, 0
+106, 2, 0, &103:108:302, s, 0
+107, 1, 0, &102:108:303, s, 0
+
+; paths 1, 2, 6 and 7 will open path 4 upon completion
+
+108, x, 0, 109, a, 4
+109, 4, 0,   x, s, 0
+
+
+; end

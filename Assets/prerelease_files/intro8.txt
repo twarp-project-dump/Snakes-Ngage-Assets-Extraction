@@ -1,0 +1,28 @@
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name 
+;
+N:intro 8
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                             french                             german                            spanish                             italian
+;   123456789012345678901234567890       123456789012345678901234567890      123456789012345678901234567890     123456789012345678901234567890      123456789012345678901234567890
+T1:"Use any unique markers on the "    ,"Utilisez n\'importe quel"         ,"Benutz eindeutige Markierungen"  ,"Utiliza cualquiera de los"         ,"Usa gli indicatori sul "
+T2:"floor to help with navigation."    ,"marqueur au sol pour vous"        ,"am Boden, um dir die"            ,"marcadores del suelo para"         ,"pavimento per orientarti."
+T3:" "                                 ,"diriger."                         ,"Navigation zu erleichtern."      ,"ayudarte en la orientación."       ," "
+T4:" "                                 ," "                                ," "                               ," "                                 ," "
+T5:" "                                 ," "                                ," "                               ," "                                 ," "
+T6:" "                                 ," "                                ," "                               ," "                                 ," "
+T7:" "                                 ," "                                ," "                               ," "                                 ," "
+T8:" "                                 ," "                                ," "                               ," "                                 ," "
+T9:" "                                 ," "                                ," "                               ," "                                 ," "
+
+
+@
+
+
+; end 
+

@@ -1,0 +1,28 @@
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name 
+;
+N:intro
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                              french                              german                             spanish                              italian
+;   123456789012345678901234567890       123456789012345678901234567890      123456789012345678901234567890     123456789012345678901234567890       123456789012345678901234567890
+T1:"Directional arrows can be used"    ,"Les flèches directionnelles"      ,"Richtungspfeile helfen zu"       ,"Usa las flechas de dirección"      ,"Puoi usare le frecce"				
+T2:"to determine where to go next."    ,"peuvent servir à déterminer"      ,"bestimmen, wohin du als"         ,"para decidir hacia donde te"       ,"direzionali per decidere dove "
+T3:" "                                 ,"le chemin à suivre."              ,"Nächstes musst."                 ,"diriges."                          ,"dirigerti."
+T4:" "                                 ," "                                ," "                               ," "                                 ," "
+T5:" "                                 ," "                                ," "                               ," "                                 ," "
+T6:" "                                 ," "                                ," "                               ," "                                 ," "
+T7:" "                                 ," "                                ," "                               ," "                                 ," "
+T8:" "                                 ," "                                ," "                               ," "                                 ," "
+T9:" "                                 ," "                                ," "                               ," "                                 ," "
+
+
+@
+
+
+; end 
+

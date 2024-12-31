@@ -1,0 +1,24 @@
+; Level 4 - first appearance of non-destructable walls (and pickup seeker)
+
+; paths are opened in turn and player is shown the way around the level
+
+100, 12, 1, 101, s, 0
+101, 11, 0, 102, s, 0
+102,  3, 0, 103, s, 0
+103,  6, 0, 104, s, 0
+104, 14, 0, 105, s, 0
+105,  9, 0, 106, s, 0
+106,  2, 0, 107, s, 0
+107,  8, 0, 108, s, 0
+108, 15, 0, 109, s, 0
+109, 10, 0, 110, s, 0
+110,  1, 0, 111, s, 0
+111,  5, 0, 112, s, 0
+112, 13, 0, 113, s, 0
+113,  7, 0, 114, s, 0
+114,  0, 0, 115, s, 0
+115,  4, 0, 100, s, 0
+
+
+
+; end

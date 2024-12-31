@@ -1,0 +1,34 @@
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name 
+;
+N:intro 12
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+;   english                              french                              german                             spanish                             italian
+;   123456789012345678901234567890       123456789012345678901234567890      123456789012345678901234567890     123456789012345678901234567890      123456789012345678901234567890
+T1:"Some power paths are timed to"    , "Certains chemins de puissance"   , "Einige Kraftpfade verschwinden" , "Algunos caminos de potencia"      ,"Alcuni percorsi di energia"
+T2:"disappear and reappear."          , "sont programmés pour"            , "und erscheinen in Intervallen." , "pueden desaparecer y"             ,"scompaiono e riappaiono"
+T3:" "                                , "disparaître et réapparaître."    , " "                              , "reaparecer."                      ,"periodicamente."
+T4:"Pay close attention not to"       , "Faites attention à ne"           , "Achte darauf, damit du "        , "Mantente muy alerta para no"      ,"Fai attenzione a non perderne"
+T5:"miss any..."                      , "manquer aucun..."                , "keinen verpasst ..."            , "perderte ninguno..."              ,"nessuno..."
+T6:" "                                , " "                               , " "                              , " "                                ," "
+T7:" "                                , " "                               , " "                              , " "                                ," "
+T8:" "                                , " "                               , " "                              , " "                                ," "
+T9:" "                                , " "                               , " "                              , " "                                ," "
+
+
+
+
+100, 0, 1, 101, t, 3
+101, x, 0, 100, t, 3
+
+102, 1, 0, 103, t, 3
+103, x, 1, 102, t, 3
+
+
+; end 
+

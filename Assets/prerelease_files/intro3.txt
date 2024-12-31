@@ -1,0 +1,30 @@
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name 
+;
+N:intro 3
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+
+;  123456789012345678901234567890
+;   english                              french                              german                             spanish                             italian
+;   123456789012345678901234567890       123456789012345678901234567890      123456789012345678901234567890     123456789012345678901234567890      123456789012345678901234567890
+T1:"Follow the power paths"            ,"Parcourez les chemins de "        ,"Folg den Kraftpfaden von"        ,"Sigue los caminos de potencia"     ,"Segui i percorsi di energia"
+T2:"from one end to the other"         ,"puissance d\'un bout à "          ,"einem Ende zum anderen, um"      ,"de principio a fin"                ,"da un'estremità all'altra"			
+T3:"to gain maximum points. "          ,"l\'autre pour obtenir le plus"    ,"maximale Punkte zu erhalten."    ,"para obtener más puntos. "         ,"per totalizzare il massimo"		
+T4:" "                                 ,"de points possible."              ,"Wenn die Zeit abgelaufen ist,"   ," "                                 ,"dei punti."						
+T5:"If time runs out you will"         ,"Si le temps s\'écoule vous"       ,"verlierst du deinen"             ,"Si te quedas sin tiempo"           ,"Se il tempo scadrà"				
+T6:"lose your score multiplyer"        ,"perdrez le multiplicateur de"     ,"Punkte-Multiplikator."           ,"perderás tu multiplicador"         ,"perderai il tuo moltiplicatore"
+T7:" "                                 ,"scores"                           ," "                               ," de puntos"                        ,"del punteggio"
+T8:" "                                 ," "                                ," "                               ," "                                 ," "
+T9:" "                                 ," "                                ," "                               ," "                                 ," "
+
+
+@
+
+
+; end 
+

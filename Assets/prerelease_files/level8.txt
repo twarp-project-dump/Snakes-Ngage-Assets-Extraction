@@ -1,0 +1,53 @@
+; level 8 - based on 'crossbridge' level. linear route around this level
+
+; collecting pickup opens power path which in turn opens another path
+
+300, 17, 1, 100, s, 0
+100,  2, 0, 101, s, 0
+101,  4, 0, &301:302:303, s, 0
+
+; 3 triggers have to be activated to make next path active
+
+301, 18, 1, 121, s, 0
+302, 20, 1, 121, s, 0
+303, 23, 1, 121, s, 0
+
+121, x, 0, 122, a, 3
+122, 8, 0, 102, s, 0
+
+102, 6, 0, 304, s, 0
+
+; pickup trigger starts one of 2 paths, completing any of these paths starts path 9
+
+304, 24, 1, |103:104, s, 0
+103, 10, 0, 105, s, 0
+104, 11, 0, 105, s, 0
+
+105,  9, 0, 106, s, 0
+106,  7, 0, &305:306:307, s, 0
+
+; 3 triggers have to be activated to make next path active
+
+305, 22, 1, 123, s, 0
+306, 21, 1, 123, s, 0
+307, 19, 1, 123, s, 0
+
+123, x, 0, 124, a, 3
+124, 3, 0, 107, s, 0
+
+107, 5, 0, 108, s, 0
+108, 1, 0, &308:309, s, 0
+
+; 2 triggers have to be activated to make next path active
+
+308, 15, 1, 125, s, 0
+309, 16, 1, 125, s, 0
+
+125, x, 0, 126, a, 2
+126, 0, 0, 300, s, 0
+
+; 109, 0, 0, 300, s, 0
+
+
+
+; end

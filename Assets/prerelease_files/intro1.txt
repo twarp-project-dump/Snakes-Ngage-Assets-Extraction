@@ -1,0 +1,27 @@
+;
+; two new script bits
+; 1st is the name of the level so we can give it and display and interesting name 
+;
+N:intro 1
+
+;
+; second the text lines (9 in total) and this is how we format them
+; 5 languages
+;
+
+;    english                             french                              german                             spanish                             italian
+;   123456789012345678901234567890       123456789012345678901234567890      123456789012345678901234567890     123456789012345678901234567890      123456789012345678901234567890
+T1:"Collect as many pickups as"        ,"Ramassez autant de recharges"     ,"Sammle so viele Pickups"         ,"Recoge tantos extras como"         ,"Raccogli più oggetti che"			
+T2:"possible to attain a higher"       ,"que possible pour obtenir le"     ,"wie möglich, um mehr Punkte"     ,"puedas para obtener una"           ,"puoi per ottenere un punteggio"
+T3:"score."                            ,"meilleur score."                  ,"zu bekommen."                    ,"puntuación mayor."                 ,"più alto."
+T4:" "                                 ," "                                ,"Erreich die Ziel-Punkte, um"     ," "                                 ," "
+T5:"Reach the target score to"         ,"Atteignez le score fixé pour"     ,"dich ins nächste Level zu"       ,"Alcanza la puntuación"             ,"Per evolverti al livello"			
+T6:"evolve to the next level."         ,"passer au niveau supérieur."      ,"entwickeln."                     ,"necesaria para pasar al"           ,"successivo raggiungi il"			
+T7:" "                                 ," "                                ," "                               ,"siguiente nivel."                  ,"punteggio fissato."
+T8:" "                                 ," "                                ," "                               ," "                                 ," "
+T9:" "                                 ," "                                ," "                               ," "                                 ," "
+
+
+@
+
+; end 

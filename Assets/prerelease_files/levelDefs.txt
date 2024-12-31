@@ -1,0 +1,73 @@
+; define level order list, anything begining with 
+; i is an intro level and will be displayed on its 
+; own screen with text taken from the level script
+; anything begining with l is a proper level and
+; will be played in single player 
+
+intro1.dat
+level_basic1.dat
+level0.dat
+
+intro2.dat
+level_basic2.dat
+
+intro3.dat                 
+level1.dat
+
+intro4.dat
+level2.dat
+level3.dat
+
+intro5.dat
+level4.dat
+level5.dat
+
+intro6.dat
+level6.dat
+level7.dat
+
+intro7.dat
+level8.dat
+level9.dat
+
+intro8.dat
+level10.dat
+level11.dat
+
+intro9.dat
+level12.dat
+level13.dat
+
+intro10.dat
+level14.dat
+level15.dat
+
+intro11.dat
+level16.dat
+level17.dat
+
+intro12.dat
+level18.dat
+level19.dat
+
+intro13.dat
+level20.dat
+
+
+
+; define multiplayer levels last 
+; again anything begining with m is taken to be a 
+; multiplayer level
+
+multi_1.dat
+multi_2.dat
+multi_3.dat
+multi_4.dat
+multi_6.dat
+multi_5.dat
+multi_7.dat
+multi_8.dat
+multi_9.dat
+
+
+; end
