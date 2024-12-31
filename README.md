@@ -39,3 +39,6 @@ The pixel data works as follows: it always starts with a color. If the image has
 If there are less than 16 colors defined in the image (details fuzzy on this), then the RLE color may have 4-bit RLE applied instead. The following byte will be the next color, rather than the run length. The color byte in this situation is split in two, the uppermost 4 bits are the RLE data and the lowermost 4 are the color data (as such, the 16 color limit is an educated guess). To get the run length of the color, you need to ignore the uppermost bit and look at the next 3 (for example, ```xA1``` from the first ```.spt``` header example image is 10100001 in binary form. Then 1010 is the RLE data and 0001 is the color data. This means that its run length is 010 in binary, or just 2, and its color is color 1)
 
 If there are multiple images in the ```.spt``` file, then the next RLE chunk length word is located at the end of the previous RLE chunk end.
+
+## ```.bix``` files
+These seem to be the 3d models used in the game. I have not tried to parse these yet, so any help would be appreciated.
