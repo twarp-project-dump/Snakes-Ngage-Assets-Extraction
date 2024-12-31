@@ -42,3 +42,12 @@ If there are multiple images in the ```.spt``` file, then the next RLE chunk len
 
 ## ```.bix``` files
 These seem to be the 3d models used in the game. I have not tried to parse these yet, so any help would be appreciated.
+
+## ```.lsc``` files
+Barely researched, seem to define the level triggers, pickups or paths.
+
+## ```.dat``` files
+Seem to be the files that contain level geometry or other info about the levels.
+
+## ```.txt``` files
+These include the slight dev commentary, list of tracks that play in each set of level and the sets of levels themselves. There are mentions of "groovetracker" scripts, which is apparently how the game decides which music to play. You can look at those scripts yourself by opening the files.
