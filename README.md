@@ -24,5 +24,7 @@ You can find the exact length of the header by looking at the offset of the file
 Now simply parse the ```Asset packing files``` and you will have each asset to play with. Let's take a look at some of them.
 
 ## ```.adp``` files
-These are sound files, 8KHz sample rate, VOX ADPCM(?) encoding. You can play them through (Audacity)[https://www.audacityteam.org/] by importing each as a raw file with the settings mentioned before. Here are the sounds [uploaded to YouTube](https://www.youtube.com/watch?v=SK5fnwmWgrs).
+These are sound files, 8KHz sample rate, VOX ADPCM(?) encoding. You can play them through [Audacity](https://www.audacityteam.org/) by importing each as a raw file with the settings mentioned before. Here are the sounds [uploaded to YouTube](https://www.youtube.com/watch?v=SK5fnwmWgrs).
 
+## ```.spt``` files
+These are the in-game sprites. Each ```.spt``` file can conntain multiple images. The header defines the 4-bit colors used in each image.
