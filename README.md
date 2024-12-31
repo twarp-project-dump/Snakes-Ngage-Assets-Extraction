@@ -1,5 +1,10 @@
 # Snakes (NGage game) Assets Extraction Guide
 
+### Repo structure
+- [Scripts](/Scripts) will contain ```.py``` scripts that can be used to extract assets from ```Asset packing files``` as well as instructions (the scripts not yet here sorry)
+- [Assets](/Assets) will contain the raw extracted assets from each version of the game that I could find (not yet here either sorry)
+- [Decoded Images](/Decoded%20Images) will contain the decoded sprites from each game version that I could find
+
 ### What you'll need:
 1. A ```.sis``` of Snakes below version 0.6.X.X (Explanation will follow, info on versions is fuzzy)
 2. A working setup of [EKA2L1](https://github.com/EKA2L1/EKA2L1) (to extract the .PAK files)
