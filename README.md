@@ -15,20 +15,20 @@
 1. Install the ```.sis``` you have into EKA2L1.
 2. Locate the ```.PAK``` files (Mine were located over at ```\[PATH TO YOUR EKA2L1 INSTALL\]\data\drives\e\System\Apps\6R45```)   
    Snakes has 5 ```.PAK``` files, numbered 6R45-ZZ01 through 6R45-ZZ05   
-   !! If you end up with ```.pakc``` files then you have a version made for S60v3 and above devices. !! Those versions have their assets encrypted for whatever reason. I have been unable to break the encryption.
-4. Run offzip on each file to extract the assets in some proprietary (?) format that will now need to be unpacked
+   !! If you end up with ```.pakc``` files, then you have a version made for devices running S60v3 and above. Those versions have their assets encrypted for whatever reason. I have been unable to break the encryption :(
+4. Run offzip on each file to extract the assets in some proprietary (?) format
 
 ### What are these files you just extracted?
 Offzip by default names them 00000031.dat (rarely they have a different name). For the intents of this guide thing, I'll refer to them as the ```Asset packing files```.   
-They contain a number of game assets, each one having an entry in the header of the file. Headers are 32 bytes long. 
+They contain a number of game assets, each one having an entry in the header of the file. Each header entry is 32 bytes long. 
 
 ![heres a pic of the header](imgs/asset%20packing%20header.png)
 
-First word contains the length of the file name. Second word is the offset from the beginninng of the file at which the file name begins. Fourth and fifth word follow the same logic as described above, but they point to the contents of the file itself along with its length. Last 2 words are reserves for some sort of a numbering system.
+First word of the header entry contains the length of the file name. Second word is the offset from the beginninng of the file at which the file name begins. Fourth and fifth word follow the same logic as described above, but they point to the contents of the file itself along with its length. Last 2 words are reserves for some sort of a numbering system.
 
 You can find the exact length of the header by looking at the offset of the filename of the first header entry. It points to the beginning of the section that holds the filenames, which is where the header ends.
 
-Now simply parse the ```Asset packing files``` and you will have each asset to play with. Let's take a look at some of them.
+Now simply parse the ```Asset packing files``` and you will have each asset as a seperate file to play with. Let's take a look at some of them.
 
 ## ```.adp``` files
 These are sound files, 8KHz sample rate, VOX ADPCM(?) encoding. You can play them through [Audacity](https://www.audacityteam.org/) by importing each as a raw file with the settings mentioned before. Here are the sounds [uploaded to YouTube](https://www.youtube.com/watch?v=SK5fnwmWgrs).
