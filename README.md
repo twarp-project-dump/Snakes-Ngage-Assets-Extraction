@@ -18,7 +18,7 @@
    !! If you end up with ```.pakc``` files, then you have a version made for devices running S60v3 and above. Those versions have their assets encrypted for whatever reason. I have been unable to break the encryption :(
 4. Run offzip on each file to extract the assets in some proprietary (?) format
 
-### What are these files you just extracted?
+### What are these files that you just extracted?
 Offzip by default names them 00000031.dat (rarely they have a different name). For the intents of this guide thing, I'll refer to them as the ```Asset packing files```.   
 They contain a number of game assets, each one having an entry in the header of the file. Each header entry is 32 bytes long. 
 
