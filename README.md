@@ -1,8 +1,8 @@
 # Snakes (NGage game) Assets Extraction Guide
 
 ### Repo structure
-- [Scripts](/Scripts) will contain ```.py``` scripts that can be used to extract assets from ```Asset packing files``` as well as instructions (the scripts not yet here sorry)
-- [Assets](/Assets) will contain the raw extracted assets from each version of the game that I could find (not yet here either sorry)
+- [Scripts](/Scripts) will contain ```.py``` scripts that can be used to extract assets from ```Asset packing files``` as well as instructions (the instructions not yet here my bad)
+- [Assets](/Assets) will contain the raw extracted assets from each version of the game that I could find
 - [Decoded Images](/Decoded%20Images) will contain the decoded sprites from each game version that I could find
 - [Decoded OST](/Decoded%20OST) contains all the sounds from Snake60 version 0.5.1.4 in ```.wav``` format
 
