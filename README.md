@@ -19,7 +19,7 @@
 4. Run offzip on each file to extract the assets in some proprietary (?) format that will now need to be unpacked
 
 ### What are these files you just extracted?
-Offzip by default names them 00000031.dat (rarely they have a different name). For intents of this guide, I'll refer to them as the ```Asset packing files```.   
+Offzip by default names them 00000031.dat (rarely they have a different name). For intents of this guide thing, I'll refer to them as the ```Asset packing files```.   
 They contain a number of game assets, each one having an entry in the header of the file. Headers are 32 bytes long. 
 
 ![heres a pic of the header](imgs/asset%20packing%20header.png)
