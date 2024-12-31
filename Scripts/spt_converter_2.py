@@ -7,9 +7,9 @@ import sys
 from os import listdir
 from os.path import isfile, join
 
-path_to_folder = ""
+path_to_folder = "prerelease_files"
 
-path_to_save_folder = ""
+path_to_save_folder = "prerelease_imgs"
 
 class EncodedImage:
     def __init__(self, offset, length):
@@ -27,7 +27,7 @@ def read_spt_file(spt_path_ : str, img_name : str):
     spt_type = int(data[0])
 
     images_stored = int(data[4])
-    print(f"likely {images_stored} images detected")
+    #print(f"likely {images_stored} images detected")
 
     image_x = int(data[8])
     image_y = int(data[12])
@@ -123,8 +123,14 @@ def read_spt_file(spt_path_ : str, img_name : str):
                     i_ += 1
                     color_length = data[i_]
 
+
                     if color_length > 127:
-                        color_length = color_length - 1
+                        i_ += 1
+
+                        #print(f"{color_length} {bin(color_length)} cl {data[i_]} {bin(data[i_])} tr")
+                        color_length += 128 * (data[i_] - 1)
+
+                        
 
                     #print(f'rle compressed color {current_color} with length {color_length}')
                     total_len += color_length
