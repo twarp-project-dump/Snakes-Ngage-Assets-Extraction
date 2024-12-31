@@ -28,3 +28,5 @@ These are sound files, 8KHz sample rate, VOX ADPCM(?) encoding. You can play the
 
 ## ```.spt``` files
 These are the in-game sprites. Each ```.spt``` file can conntain multiple images, this is denoted by the first byte of the first word. ```x02``` is singe-image, ```x06``` is multi-image. Second word correspongs to the number of images contained within the file. Bytes at offsets ```x08``` and ```x0C``` are image width and image height respectively. These seem to remain constant for all images in the file. After this, the byte at ```x0D``` in single-image files and at ```x15``` in multi-image files is the number of colors that will be defined in the file. After that, pairs of bytes describe 4-bit ARGB colors. The word that follows the color definition section is in big-endian and is the length of the RLE-encoded pixel data.
+
+![pic of a single-image .spt file header](imgs/spt%20format.png)
