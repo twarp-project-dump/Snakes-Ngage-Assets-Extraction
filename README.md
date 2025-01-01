@@ -11,6 +11,8 @@
 2. A working setup of [EKA2L1](https://github.com/EKA2L1/EKA2L1) (to extract the .PAK files) (or any other method of unpacking ```.sis``` files.)
 3. [Offzip](http://aluigi.altervista.org/search.php?src=offzip) to unpack the .PAK files
 
+If you wish to forgo installing EKA2L1, then https://github.com/1upus/N-Gage_stuff/tree/master has a number of programs that can extract files from the ```.sis``` as well as a script for [QuickBMS](https://aluigi.altervista.org/quickbms.htm) that allows you to extract data from the ```.dat``` files that the game uses.
+
 ### How to extract asset packing files PAK files:
 1. Install the ```.sis``` you have into EKA2L1.
 2. Locate the ```.PAK``` files (Mine were located over at ```\[PATH TO YOUR EKA2L1 INSTALL\]\data\drives\e\System\Apps\6R45```)   
