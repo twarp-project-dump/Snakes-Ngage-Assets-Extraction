@@ -50,15 +50,13 @@ If there are less than 16 colors defined in the image (details fuzzy on this), t
 If there are multiple images in the ```.spt``` file, then the next RLE chunk length word is located at the end of the previous RLE chunk end.
 
 ## ```.bix``` files
-These seem to be the 3d models used in the game. I have not tried to parse these yet, so any help would be appreciated.
+These seem to be the 3d models used in the game.
 
 ## ```.lsc``` files
-Barely researched, seem to define the level triggers, pickups or paths. Seem to resemble the level trigger and pickup definition ```.txt``` files used in the prerelease.
+Seem to define the level triggers, pickups or paths. They resemble the level trigger and pickup definition ```.txt``` files used in the prerelease.
 
 ## ```.dat``` files
-Seem to be the files that contain level geometry or other info about the levels.
+Seem to be the files that contain level geometry and other info about the levels.
 
 ## ```.txt``` files
-These include the slight dev commentary, list of tracks that play in each set of level and the sets of levels themselves. There are mentions of "groovetracker" scripts, which is apparently how the game decides which music to play. You can look at those scripts yourself by opening the files.
-
-The prerelease did not have the ```.lsc``` files in it and instead had text files that described the paths and triggers and also contained short dev comments on the levels and level spawns.
+These include dev commentary, the list of tracks that play in each set of levels and said sets of levels themselves. There are mentions of "groovetracker" scripts, which are likely how the game decides which music to play.
