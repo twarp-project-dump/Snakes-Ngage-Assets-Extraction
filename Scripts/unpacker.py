@@ -3,7 +3,7 @@ import codecs
 
 path_to_file = ""
 
-def unpack_speechpack(file_path):
+def unpack_thing(file_path):
     with open(file_path, 'rb') as f:
         first_fname = f.read(8)
         header_len = struct.unpack('<i', first_fname[4:8])[0]
@@ -32,15 +32,15 @@ def unpack_speechpack(file_path):
             f.seek(offset["fname_off"])
             data = f.read(offset["fname_len"])
 
-            sound_name = data.decode('unicode_escape')[:-1]
+            fl_name = data.decode('unicode_escape')[:-1]
 
-            print(sound_name)
+            print(fl_name)
             
             f.seek(offset["sound_off"])
             data = f.read(offset["sound_len"])
             
-            with open(f'{path_to_file}\\{sound_name}', 'wb') as audio_file:
-                audio_file.write(data)
-            print(f'{sound_name} written')
+            with open(f'{path_to_file}\\{fl_name}', 'wb') as thing_file:
+                thing_file.write(data)
+            print(f'{fl_name} written')
 
-unpack_speechpack(f'{path_to_file}\\5.dat')
+unpack_thing(f'{path_to_file}\\5.dat')
