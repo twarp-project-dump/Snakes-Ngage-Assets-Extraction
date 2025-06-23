@@ -217,6 +217,7 @@ void decryptPAKC_step3_76198(uint8_t *input, int32_t *output) //8 bytes to 2 dwo
                 (input[6] << 8) |
                 input[7];
 }
+// ^should be fully correct
 
 int decryptPAKC_step5_7613C(int32_t *block, int output_offset)
 {
@@ -297,17 +298,37 @@ void print_usage(const char *program_name)
     printf("  also each *.pakc should be called 6r45-zz0<number here>.pakc\n");
 }
 
+void shift_words(uint8_t *data, size_t size)
+{
+    uint32_t *words = (uint32_t *)data;
+    size_t word_count = size / sizeof(uint32_t);
+
+    if (word_count < 2){
+        perror("WHAT");
+        return;
+    }
+
+    for (size_t i = 1; i + 2 < word_count; i += 2)
+    {
+        words[i] = words[i + 2];
+    }
+
+    words[word_count - 1] = 0;
+}
+
 int main(int argc, char *argv[])
 {
+    int archive_number = 0;
+
     if (argc != 2)
     {
         print_usage(argv[0]);
-        return 1;
+    }else{
+        archive_number = atoi(argv[1]);
     }
 
-    int archive_number = atoi(argv[1]);
 
-    if (archive_number < 1 || archive_number > 5)
+    if (archive_number < 0 || archive_number > 4)
     {
         fprintf(stderr, "theres only 5 PAKCs\n");
         print_usage(argv[0]);
@@ -380,6 +401,9 @@ int main(int argc, char *argv[])
 
     char output_filename[256];
     snprintf(output_filename, sizeof(output_filename), "6r45-zz0%d_decrypted.PAK", (archive_number + 1));
+
+    //not sure if this is a hack but it works i guess
+    shift_words(output_data, file_size);
 
     FILE *out_fp = fopen(output_filename, "wb");
     if (!out_fp)
