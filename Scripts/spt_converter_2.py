@@ -1,23 +1,17 @@
 import numpy as np
 from PIL import Image
-import struct
-from matplotlib import pyplot as plt
-import matplotlib.animation as animation
-import sys
 from os import listdir
 from os.path import isfile, join
-
-path_to_folder = "prerelease_files"
-
-path_to_save_folder = "prerelease_imgs"
+import argparse
+import os
 
 class EncodedImage:
     def __init__(self, offset, length):
         self.offset = offset
         self.length = length
 
-def read_spt_file(spt_path_ : str, img_name : str):
-    print(f"Currently reading {img_name}")
+def read_spt_file(spt_path_ : str, img_name : str, out_dir : str):
+    print(f"Currently reading {img_name}", end="")
     data = np.fromfile(spt_path_, dtype='B', count=-1)
 
     if len(data) == 0:
@@ -174,6 +168,7 @@ def read_spt_file(spt_path_ : str, img_name : str):
     enc_i : EncodedImage
     for enc_i in encoded_images:
         read_image(enc_i.offset, enc_i.length)
+        print(f".", end="")
 
     output_images_colored = []
 
@@ -206,16 +201,45 @@ def read_spt_file(spt_path_ : str, img_name : str):
     #plt.show()
 
     if len(output_images_colored) == 1:
-        Image.fromarray(output_images_colored[0].reshape(image_y, image_x, 4), 'RGBA').save(f'{path_to_save_folder}\\{img_name[:-4]}.png')
+        output_path = os.path.join(out_dir, f"{img_name[:-4]}.png")
+        Image.fromarray(output_images_colored[0].reshape(image_y, image_x, 4), 'RGBA').save(output_path)
     else:
         for i, img_ in enumerate(output_images_colored):
-            Image.fromarray(img_.reshape(image_y, image_x, 4), 'RGBA').save(f'{path_to_save_folder}\\{img_name[:-4]}_{i}.png')
+            output_path = os.path.join(out_dir, f"{img_name[:-4]}_{i}.png")
+            Image.fromarray(img_.reshape(image_y, image_x, 4), 'RGBA').save(output_path)
+    print(" done.")
 
-files_thing = [f for f in listdir(path_to_folder) if isfile(join(path_to_folder, f))]
-spt_files = []
-for i in range(len(files_thing)):
-    if files_thing[i].lower().endswith('.spt'):
-        spt_files.append(files_thing[i])
+def process_spt_files(input_dir: str, output_dir: str):
+    if not os.path.exists(input_dir):
+        print(f"no input directory named '{input_dir}'")
+        return
 
-for i in spt_files:
-    read_spt_file(f'{path_to_folder}\\{i}', i)
+    spt_files = [f for f in listdir(input_dir) 
+                if isfile(join(input_dir, f)) and f.lower().endswith('.spt')]
+
+    if not spt_files:
+        print(f"no .spt files in input directory named {input_dir}")
+        return
+
+    print(f"...found {len(spt_files)} .spt files to process")
+
+    for filename in spt_files:
+        input_path = join(input_dir, filename)
+        read_spt_file(input_path, filename, output_dir)
+    
+    print(f"wrote like {len(spt_files)} .pngs to {output_dir}")
+
+def main():
+    parser = argparse.ArgumentParser(description='Convert .spt images to .png ones')
+    parser.add_argument('input_dir', help='Directory containing .spt files')
+    parser.add_argument('-o', '--output', help='Output directory (default: input_dir + "_output")')
+    
+    args = parser.parse_args()
+    
+    input_dir = args.input_dir
+    output_dir = args.output if args.output else f"{input_dir}_output"
+    
+    process_spt_files(input_dir, output_dir)
+
+if __name__ == '__main__':
+    main()
