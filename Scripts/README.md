@@ -14,4 +14,4 @@ NOTE: each pixel's channel's max values are 240, which is how EKA2L1 seems to di
 
 ## PAKC_decryptor
 
-A reimplementation of the Blowfish cipher based on the IDA PRO decompilation of Snakes. 
+A reimplementation of the Blowfish cipher decryption based on the IDA PRO decompilation of Snakes. Should turn encrypted ```.pakc``` files into readable ```.pak``` archives. More information in the related folder.
