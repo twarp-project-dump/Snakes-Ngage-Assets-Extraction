@@ -51,6 +51,7 @@ def read_spt_file(spt_path_ : str, img_name : str, out_dir : str):
             print("error processing colors")
             return
         bytes_two_binned = vec_padder(vec_binner(bytes_two))
+        #this does seem to only ever produce images that have 240 as max values, but it does perfectly match what you see in the emulator (tested by overlaying a screencap of the snakes logo on top of the mainlogo.png), so IDK what to make of it. bump the alpha up by 15 or so if you want fully opaque images. lol
         tr = int(bytes_two_binned[0][0:4], 2)*16
         r = int(bytes_two_binned[0][4:8], 2)*16
         g = int(bytes_two_binned[1][0:4], 2)*16
