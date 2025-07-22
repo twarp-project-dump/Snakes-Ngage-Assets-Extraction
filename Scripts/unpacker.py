@@ -47,7 +47,7 @@ def unpack_thing(file_path, out_dir = None):
             print(f'{fl_name} written')
 
 def main():
-    parser = argparse.ArgumentParser(description='Unpack files from a binary container.')
+    parser = argparse.ArgumentParser(description='Unpack files from the asset packing file')
     parser.add_argument('input_file', help='Path to the input file to unpack')
     parser.add_argument('-o', '--output', help='Output directory (default: same as input file)')
     
