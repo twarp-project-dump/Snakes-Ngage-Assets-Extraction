@@ -4,17 +4,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static uint32_t unk_7F4D0[18]; 
-static uint32_t dword_7F518[1024];
+static uint32_t P_ARRAY[18];
+static uint32_t S_BOXES[1024];
 
-#define CONTEXT_BUFFER_SIZE 4044 
+#define CONTEXT_BUFFER_SIZE 4044
 
 const char *ARCHIVE_KEYS[5] = {
     "asefcsee",
     "sddfcer4",
     "3434frdc",
     "fvbtgrsf",
-    "34fgrfgf" 
+    "34fgrfgf"
 };
 
 const char *ARCHIVE_FILES[5] = {
@@ -43,33 +43,33 @@ int load_binary_files()
 {
     FILE *fp;
 
-    fp = fopen("unk_7F4D0.bin", "rb");
+    fp = fopen("P_ARRAY_7F4D0.bin", "rb");
     if (!fp)
     {
-        perror("cant open unk_7F4D0.bin");
+        perror("cant open P_ARRAY_7F4D0.bin");
         return 0;
     }
-    if (fread(unk_7F4D0, 1, 72, fp) != 72)
+    if (fread(P_ARRAY, 1, 72, fp) != 72)
     {
         fclose(fp);
-        perror("cant read unk_7F4D0.bin");
+        perror("cant read P_ARRAY_7F4D0.bin");
         return 0;
     }
 
-    //print_hex_buffer("unk_7F4D0 contents", (uint8_t *)unk_7F4D0, 72);
+    // print_hex_buffer("unk_7F4D0 contents", (uint8_t *)unk_7F4D0, 72);
 
     fclose(fp);
 
-    fp = fopen("dword_7F518.bin", "rb");
+    fp = fopen("S_BOXES_7F518.bin", "rb");
     if (!fp)
     {
-        perror("cant open dword_7F518.bin");
+        perror("cant open S_BOXES_7F518.bin");
         return 0;
     }
-    if (fread(dword_7F518, 1, 4096, fp) != 4096)
+    if (fread(S_BOXES, 1, 4096, fp) != 4096)
     {
         fclose(fp);
-        perror("cant read dword_7F518.bin");
+        perror("cant read S_BOXES_7F518.bin");
         return 0;
     }
     fclose(fp);
@@ -78,6 +78,8 @@ int load_binary_files()
 }
 
 #define HIBYTE(x) (((x) >> 24) & 0xFF)
+#define BYTE2(x) (((x) >> 16) & 0xFF)
+#define BYTE1(x) (((x) >> 8) & 0xFF)
 
 typedef uint32_t _DWORD;
 typedef uint16_t _WORD;
@@ -93,7 +95,7 @@ int decryptPAKC_step7_702F0(uint32_t *key_buffer, int *output)
     int v4 = output[1];
     int v5 = key_buffer[4] ^ output[0];
 
-    // ??? Feistel cipher IDK I didnt really learn algorithms
+    // 16 rounds of encryption
     int v6 = decryptPAKC_step6_7754C((int)key_buffer, v5) ^ v4 ^ key_buffer[5];
     int v7 = decryptPAKC_step6_7754C((int)key_buffer, v6) ^ v5 ^ key_buffer[6];
     int v8 = decryptPAKC_step6_7754C((int)key_buffer, v7) ^ v6 ^ key_buffer[7];
@@ -111,7 +113,7 @@ int decryptPAKC_step7_702F0(uint32_t *key_buffer, int *output)
     int v20 = decryptPAKC_step6_7754C((int)key_buffer, v19) ^ v18 ^ key_buffer[19];
     int result = decryptPAKC_step6_7754C((int)key_buffer, v20) ^ v19 ^ key_buffer[20];
 
-    // Update output values
+    // update output values
     output[1] = result;
     output[0] = key_buffer[21] ^ v20;
 
@@ -128,30 +130,27 @@ uint32_t *decryptPAKC_step1_7049C(
     uint8_t temp_buffer[76];
     int step7_output[2];
 
-    //always 0 then? I guess?
+    // IV is usually all 0 i guess. if that's what it's called
     key_buffer[0] = init_values[0];
     key_buffer[1] = init_values[1];
     key_buffer[2] = init_values[0];
     key_buffer[3] = init_values[1];
 
-    //idk why
+    // very usual blowfish key len limit to 56 bytes
     if (adjusted_len > 0x38)
     {
         adjusted_len = 0x38;
     }
 
-    //copies that key thats 8 chars long. you could set this to 8 I guess
+    // the keys are usually 8 bytes long here though and thats what it copies
     memcpy(temp_buffer, input_data, adjusted_len);
 
-    //copy stuff from the exe
-    memcpy(key_buffer + 4, unk_7F4D0, 72);
-    memcpy(key_buffer + 22, dword_7F518, 4096);
-
+    // copy the sboxes and parray. they are very usual blowfish ones, but in reverse endianness, each long is reversed
+    memcpy(key_buffer + 4, P_ARRAY, 72);
+    memcpy(key_buffer + 22, S_BOXES, 4096);
 
     const uint8_t *data_ptr = temp_buffer;
     int data_pos = 0;
-
-    //print_hex_buffer("After memcpy(s)", (uint8_t *)(key_buffer), 128); //good up 2 here LOL
 
     for (unsigned int i = 0; i < 18; ++i)
     {
@@ -168,7 +167,7 @@ uint32_t *decryptPAKC_step1_7049C(
                 data_ptr = temp_buffer;
             }
 
-            //value from these bytes (4?)
+            // value from these bytes (4?)
             value = (value << 8) | byte;
         }
 
@@ -204,9 +203,8 @@ uint32_t *decryptPAKC_step1_7049C(
     return key_buffer;
 }
 
-void decryptPAKC_step3_76198(uint8_t *input, int32_t *output) //8 bytes to 2 dwords
+int decryptPAKC_step3_76198(uint8_t *input, int32_t *output) // 8 bytes to 2 dwords
 {
-
     output[0] = (input[0] << 24) |
                 (input[1] << 16) |
                 (input[2] << 8) |
@@ -216,24 +214,25 @@ void decryptPAKC_step3_76198(uint8_t *input, int32_t *output) //8 bytes to 2 dwo
                 (input[5] << 16) |
                 (input[6] << 8) |
                 input[7];
+
+    return output[1];
 }
-// ^should be fully correct
 
 int decryptPAKC_step5_7613C(int32_t *block, int output_offset)
 {
-    //this is like 3 but in reverse probably IDK it works now
+    // writes data in reverse endianness? kind of like step3? idk
 
     uint8_t *output_ptr = (uint8_t *)output_offset;
 
-    output_ptr[3] = (block[1] >> 0) & 0xFF;
-    output_ptr[2] = (block[1] >> 8) & 0xFF;
-    output_ptr[1] = (block[1] >> 16) & 0xFF;
-    output_ptr[0] = (block[1] >> 24) & 0xFF;
+    output_ptr[3] = (block[0] >> 0) & 0xFF;
+    output_ptr[2] = (block[0] >> 8) & 0xFF;
+    output_ptr[1] = (block[0] >> 16) & 0xFF;
+    output_ptr[0] = (block[0] >> 24) & 0xFF;
 
-    output_ptr[7] = (block[0] >> 0) & 0xFF;
-    output_ptr[6] = (block[0] >> 8) & 0xFF;
-    output_ptr[5] = (block[0] >> 16) & 0xFF;
-    output_ptr[4] = (block[0] >> 24) & 0xFF;
+    output_ptr[7] = (block[1] >> 0) & 0xFF;
+    output_ptr[6] = (block[1] >> 8) & 0xFF;
+    output_ptr[5] = (block[1] >> 16) & 0xFF;
+    output_ptr[4] = (block[1] >> 24) & 0xFF;
 
     return output_offset + 8;
 }
@@ -260,7 +259,9 @@ void decryptPAKC_step4_70758(uint32_t *key_buffer, int32_t *output)
     int v19 = decryptPAKC_step6_7754C((int)key_buffer, v18) ^ v17 ^ key_buffer[7];
     int v20 = decryptPAKC_step6_7754C((int)key_buffer, v19) ^ v18 ^ key_buffer[6];
 
-    output[1] = decryptPAKC_step6_7754C((int)key_buffer, v20) ^ v19 ^ key_buffer[5];
+    int result = decryptPAKC_step6_7754C((int)key_buffer, v20) ^ v19 ^ key_buffer[5];
+
+    output[1] = result;
     output[0] = key_buffer[4] ^ v20;
 }
 
@@ -298,22 +299,10 @@ void print_usage(const char *program_name)
     printf("  also each *.pakc should be called 6r45-zz0<number here>.pakc\n");
 }
 
-void shift_words(uint8_t *data, size_t size)
+void dispose_first_word(uint8_t *data, size_t *size)
 {
-    uint32_t *words = (uint32_t *)data;
-    size_t word_count = size / sizeof(uint32_t);
-
-    if (word_count < 2){
-        perror("WHAT");
-        return;
-    }
-
-    for (size_t i = 1; i + 2 < word_count; i += 2)
-    {
-        words[i] = words[i + 2];
-    }
-
-    words[word_count - 1] = 0;
+    memmove(data, data + sizeof(uint32_t), *size - sizeof(uint32_t));
+    *size -= sizeof(uint32_t);
 }
 
 int main(int argc, char *argv[])
@@ -323,10 +312,11 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         print_usage(argv[0]);
-    }else{
+    }
+    else
+    {
         archive_number = atoi(argv[1]);
     }
-
 
     if (archive_number < 0 || archive_number > 4)
     {
@@ -344,11 +334,11 @@ int main(int argc, char *argv[])
     decryptPAKC_step1_7049C(context_buffer, ARCHIVE_KEYS[archive_number], 8, init_values);
 
     printf("Step 1 should be done by now...\n");
-    //print_hex_buffer("Final buffer thing", (uint8_t *)context_buffer, 32);
+    // print_hex_buffer("Final buffer thing", (uint8_t *)context_buffer, 32);
 
     // ok now step 2 (oo)
 
-    //load pakc (only first one for now lol)
+    // load pakc (only first one for now lol)
 
     FILE *fp = fopen(ARCHIVE_FILES[archive_number], "rb");
     if (!fp)
@@ -381,9 +371,12 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    //step 2 (ooo)
+    // step 2 (ooo)
 
     decryptPAKC_step2_70BF0(context_buffer, encrypted_data, (int)output_data, file_size, 0);
+
+    // first word always seems to be garbage? not sure if this is a hack but it works i guess
+    dispose_first_word(output_data, &file_size);
 
     print_hex_buffer("first 4 bytes of decrypted PAK", output_data, 4);
 
@@ -395,15 +388,14 @@ int main(int argc, char *argv[])
                output_data[0], output_data[1],
                output_data[2], output_data[3]);
         printf("ahhhh something went WRONG");
-    }else{
-        printf("...which match F7 D3 1F 10!! well done. use offzip on it\n");
+    }
+    else
+    {
+        printf("...which do match F7 D3 1F 10!! well done. use offzip on it\n");
     }
 
     char output_filename[256];
     snprintf(output_filename, sizeof(output_filename), "6r45-zz0%d_decrypted.PAK", (archive_number + 1));
-
-    //not sure if this is a hack but it works i guess
-    shift_words(output_data, file_size);
 
     FILE *out_fp = fopen(output_filename, "wb");
     if (!out_fp)
