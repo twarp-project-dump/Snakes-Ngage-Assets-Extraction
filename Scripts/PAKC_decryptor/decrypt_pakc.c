@@ -14,16 +14,14 @@ const char *ARCHIVE_KEYS[5] = {
     "sddfcer4",
     "3434frdc",
     "fvbtgrsf",
-    "34fgrfgf"
-};
+    "34fgrfgf"};
 
 const char *ARCHIVE_FILES[5] = {
     "6r45-zz01.pakc",
     "6r45-zz02.pakc",
     "6r45-zz03.pakc",
     "6r45-zz04.pakc",
-    "6r45-zz05.pakc"
-};
+    "6r45-zz05.pakc"};
 
 void print_hex_buffer(const char *label, const uint8_t *buffer, size_t size)
 {
@@ -295,7 +293,7 @@ void print_usage(const char *program_name)
 {
     printf("Usage: %s <archive_number>\n", program_name);
     printf("  archive_number: which of the 5 PAKC files for snakes 0.6.0.19 A3 to decrypt\n");
-    printf("  you need both dword_7F518.bin and unk_7F4D0.bin in the same folder as the exe I think?\n");
+    printf("  you need both P_ARRAY_7F4D0.bin and S_BOXES_7F518.bin in the same folder as the exe\n");
     printf("  also each *.pakc should be called 6r45-zz0<number here>.pakc\n");
 }
 
@@ -307,7 +305,7 @@ void dispose_first_word(uint8_t *data, size_t *size)
 
 int main(int argc, char *argv[])
 {
-    int archive_number = 0;
+    int archive_number = 1;
 
     if (argc != 2)
     {
@@ -318,12 +316,14 @@ int main(int argc, char *argv[])
         archive_number = atoi(argv[1]);
     }
 
-    if (archive_number < 0 || archive_number > 4)
+    if (archive_number < 1 || archive_number > 5)
     {
         fprintf(stderr, "theres only 5 PAKCs\n");
         print_usage(argv[0]);
         return 1;
     }
+
+    archive_number = archive_number - 1;
 
     uint32_t context_buffer[CONTEXT_BUFFER_SIZE / sizeof(uint32_t)] = {0};
 
