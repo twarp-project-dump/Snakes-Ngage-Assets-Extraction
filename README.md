@@ -13,7 +13,7 @@
 
 If you wish to forgo installing EKA2L1, then https://github.com/1upus/N-Gage_stuff/tree/master has a number of programs that can extract files from the ```.sis``` as well as a script for [QuickBMS](https://aluigi.altervista.org/quickbms.htm) that allows you to extract the data from the ```.dat``` files that the game uses.
 
-### How to extract asset packing files PAK files:
+### How to extract the asset packing files from ```.PAK``` files:
 1. Install the ```.sis``` you have into EKA2L1
 2. Locate the ```.PAK``` files (Mine were located over at ```\[PATH TO YOUR EKA2L1 INSTALL]\data\drives\e\System\Apps\6R45```)   
    Snakes has 5 ```.PAK``` files, numbered 6R45-ZZ01 through 6R45-ZZ05   
