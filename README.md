@@ -57,12 +57,12 @@ These seem to be the 3d models used in the game. They only contain the vertex an
 Each file starts with `01 00 00 00`, followed by a word containing the number of animation frames the file has (i.e. just vertex groups) and then by the number of vertices in the model, also a word. At offset 0x0C, each vertices' coordinates are stored, one word for each of the axes. At 0x0C + ```<number of vertices> x <number of animation frames> x 3``` is the word denoting the number of faces the model has, the data for each face's vertices then follows.
 
 ## ```.lsc``` files
-These are called ```level scripts``` by ```levelDefs.txt``` and are used to define the level triggers, pickups or paths. They resemble the level trigger and pickup definition ```.txt``` files used in the prerelease.
+These are called ```level scripts``` by ```levelDefs.txt``` and are used to define the level triggers, pickups or paths. They resemble the level trigger and pickup definition ```.txt``` files used in the prerelease.   
 
-Each file usually begins with ```n:```, which points to the level's name in the Snakes' resource files. For example, ```n: 0x5dcb7165``` gets the resource file with the UID ```0x5dcb7``` and then gets the ```0x165```th entrym using it as the level name. If the level script lacks an entry of ```n: ```, then the level's .dat file's name is used as the level name.
+Each file usually begins with ```n:```, which points to the level's name in the Snakes' resource files. For example, ```n: 0x5dcb7165``` gets the resource file with the UID ```0x5dcb7``` and then gets the ```0x165```th entrym using it as the level name. If the level script lacks an entry of ```n: ```, then the level's .dat file's name is used as the level name.   
 
 ## ```.dat``` files
-Seem to be the files that contain level geometry and other info about the levels.
+Seem to be the files that contain level geometry and other info about the levels.   
 
 ## ```.txt``` files
 These include dev commentary, the list of tracks that play in each set of levels and said sets of levels themselves.   
