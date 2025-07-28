@@ -4,6 +4,14 @@ Unpack assets from the asset packing file
 
 usage: unpacker.py [-h] [-o OUTPUT] input_file   
 
+## repacker.py
+
+Repack assets back into the asset packing file
+
+usage: repacker.py [-h] [-r REFERENCE] input_dir output_file
+
+You can pass a reference ```.dat``` to preserve file order if you'd like
+
 ## spt_to_png_3.py
 
 Convert .spt images to .png ones   
