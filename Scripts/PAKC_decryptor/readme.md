@@ -1,6 +1,14 @@
-Usage: ./decrypt_pakc.exe <archive_number>   
-archive_number: which of the 5 PAKC files from snakes 0.6.0.19 A3 to decrypt, valid values are 1 through 5   
-...you need both P_ARRAY_7F4D0.bin and S_BOXES_7F518.bin in the same folder as the exe
-...also each *.pakc should be called 6r45-zz0[number here].pakc and they should be in the same folder as well   
-   
-use offzip or something on the output   
+Usage:   
+- Decrypting 
+  - decrypt_pakc.exe -i <input_file> -o <output_file> -n <key_number> -d
+- Encrypting
+  - decrypt_pakc.exe -i <input_file> -o <output_file> -n <key_number> -e
+
+-i <file>    Input file to process   
+-o <file>    Output file   
+-k <key>     Encryption/decryption key (string)   
+-kf <file>   Read key from file   
+-n <num>     Use predefined key number (1-5)   
+-d           Decrypt mode (default)   
+-e           Encrypt mode   
+-h           Show this help message   
