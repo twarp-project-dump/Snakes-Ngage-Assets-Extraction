@@ -107,3 +107,10 @@ Here are the keys for each of the five ```.pakc``` archives, in plaintext, for i
 - ```fvbtgrsf```
 
 - ```34fgrfgf```
+
+## Other stuff?
+
+The ```.PAK``` archives have a structure of their own, they have a header that contains the name of the archive as well as its number (1 through 5). Might document that later. There is also a curious line in the ```.cfg``` file of the game:   
+
+```<File Description="Downloaded Data" Path="c:\system\apps\6R45\6R45-U*.pak" FileType="GameExtension" FreeStatus="Free" CreateStatus="Downloaded" PortableStatus="NotPortable" />```   
+
